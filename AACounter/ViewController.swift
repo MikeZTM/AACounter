@@ -17,6 +17,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Fetch from Core Data
+        let fetchRequest = NSFetchRequest(entityName:"CountItem")
+        var error: NSError?
+        let fetchedResults =
+        managedObjectContext!.executeFetchRequest(fetchRequest,
+            error: &error) as? [NSManagedObject]
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
