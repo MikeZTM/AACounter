@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9E0180171B6B1ADF00952742 /* AnxietyCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnxietyCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E0180171B6B1ADF00952742 /* AACounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AACounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E01801B1B6B1ADF00952742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E01801C1B6B1ADF00952742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E01801F1B6B1ADF00952742 /* AnxietyCounter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnxietyCounter.xcdatamodel; sourceTree = "<group>"; };
@@ -36,7 +36,7 @@
 		9E0180241B6B1ADF00952742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E0180261B6B1ADF00952742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9E0180291B6B1ADF00952742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9E01802F1B6B1ADF00952742 /* AnxietyCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnxietyCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E01802F1B6B1ADF00952742 /* AACounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AACounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0180341B6B1ADF00952742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0180351B6B1ADF00952742 /* AnxietyCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyCounterTests.swift; sourceTree = "<group>"; };
 		9E0180481B6B2B5F00952742 /* CounterItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterItem.swift; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		9E0180181B6B1ADF00952742 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E0180171B6B1ADF00952742 /* AnxietyCounter.app */,
-				9E01802F1B6B1ADF00952742 /* AnxietyCounterTests.xctest */,
+				9E0180171B6B1ADF00952742 /* AACounter.app */,
+				9E01802F1B6B1ADF00952742 /* AACounterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,9 +129,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9E0180161B6B1ADF00952742 /* AnxietyCounter */ = {
+		9E0180161B6B1ADF00952742 /* AACounter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9E0180391B6B1ADF00952742 /* Build configuration list for PBXNativeTarget "AnxietyCounter" */;
+			buildConfigurationList = 9E0180391B6B1ADF00952742 /* Build configuration list for PBXNativeTarget "AACounter" */;
 			buildPhases = (
 				9E0180131B6B1ADF00952742 /* Sources */,
 				9E0180141B6B1ADF00952742 /* Frameworks */,
@@ -141,14 +141,14 @@
 			);
 			dependencies = (
 			);
-			name = AnxietyCounter;
+			name = AACounter;
 			productName = AnxietyCounter;
-			productReference = 9E0180171B6B1ADF00952742 /* AnxietyCounter.app */;
+			productReference = 9E0180171B6B1ADF00952742 /* AACounter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9E01802E1B6B1ADF00952742 /* AnxietyCounterTests */ = {
+		9E01802E1B6B1ADF00952742 /* AACounterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9E01803C1B6B1ADF00952742 /* Build configuration list for PBXNativeTarget "AnxietyCounterTests" */;
+			buildConfigurationList = 9E01803C1B6B1ADF00952742 /* Build configuration list for PBXNativeTarget "AACounterTests" */;
 			buildPhases = (
 				9E01802B1B6B1ADF00952742 /* Sources */,
 				9E01802C1B6B1ADF00952742 /* Frameworks */,
@@ -159,9 +159,9 @@
 			dependencies = (
 				9E0180311B6B1ADF00952742 /* PBXTargetDependency */,
 			);
-			name = AnxietyCounterTests;
+			name = AACounterTests;
 			productName = AnxietyCounterTests;
-			productReference = 9E01802F1B6B1ADF00952742 /* AnxietyCounterTests.xctest */;
+			productReference = 9E01802F1B6B1ADF00952742 /* AACounterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +182,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9E0180121B6B1ADF00952742 /* Build configuration list for PBXProject "AnxietyCounter" */;
+			buildConfigurationList = 9E0180121B6B1ADF00952742 /* Build configuration list for PBXProject "AACounter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -195,8 +195,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9E0180161B6B1ADF00952742 /* AnxietyCounter */,
-				9E01802E1B6B1ADF00952742 /* AnxietyCounterTests */,
+				9E0180161B6B1ADF00952742 /* AACounter */,
+				9E01802E1B6B1ADF00952742 /* AACounterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,7 +246,7 @@
 /* Begin PBXTargetDependency section */
 		9E0180311B6B1ADF00952742 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9E0180161B6B1ADF00952742 /* AnxietyCounter */;
+			target = 9E0180161B6B1ADF00952742 /* AACounter */;
 			targetProxy = 9E0180301B6B1ADF00952742 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -359,7 +359,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AnxietyCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AACounter;
 			};
 			name = Debug;
 		};
@@ -370,7 +370,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AnxietyCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AACounter;
 			};
 			name = Release;
 		};
@@ -388,7 +388,7 @@
 				);
 				INFOPLIST_FILE = AnxietyCounterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AACounterTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnxietyCounter.app/AnxietyCounter";
 			};
 			name = Debug;
@@ -403,7 +403,7 @@
 				);
 				INFOPLIST_FILE = AnxietyCounterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AACounterTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnxietyCounter.app/AnxietyCounter";
 			};
 			name = Release;
@@ -411,7 +411,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9E0180121B6B1ADF00952742 /* Build configuration list for PBXProject "AnxietyCounter" */ = {
+		9E0180121B6B1ADF00952742 /* Build configuration list for PBXProject "AACounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E0180371B6B1ADF00952742 /* Debug */,
@@ -420,7 +420,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9E0180391B6B1ADF00952742 /* Build configuration list for PBXNativeTarget "AnxietyCounter" */ = {
+		9E0180391B6B1ADF00952742 /* Build configuration list for PBXNativeTarget "AACounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E01803A1B6B1ADF00952742 /* Debug */,
@@ -428,7 +428,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		9E01803C1B6B1ADF00952742 /* Build configuration list for PBXNativeTarget "AnxietyCounterTests" */ = {
+		9E01803C1B6B1ADF00952742 /* Build configuration list for PBXNativeTarget "AACounterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E01803D1B6B1ADF00952742 /* Debug */,

@@ -21,15 +21,18 @@ class ViewController: UIViewController {
         // Print it to the console
         println(managedObjectContext)
         // new item
-        let newItem = NSEntityDescription.insertNewObjectForEntityForName("CounterItem", inManagedObjectContext: self.managedObjectContext!) as! CounterItem
         
-        [NSDate date]
-        newItem.time=
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func plusClick(sender: AnyObject) {
+        let newItem = NSEntityDescription.insertNewObjectForEntityForName("CounterItem", inManagedObjectContext: self.managedObjectContext!) as! CounterItem
+        newItem.time=NSDate()
+        newItem.device="iPhone"
     }
 
 }

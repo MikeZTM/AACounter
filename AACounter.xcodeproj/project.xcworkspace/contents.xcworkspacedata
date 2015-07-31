@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AnxietyCounter.xcodeproj">
+      location = "self:/Users/Mikelee/Documents/AnxietyCounter/AACounter.xcodeproj">
    </FileRef>
 </Workspace>
