@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AACounter.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>AnxietyCounter.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>9E01802E1B6B1ADF00952742</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9ECD649F1B6B394F00C94FC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9ECD64B61B6B394F00C94FC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,15 +1,15 @@
 //
-//  AnxietyCounterTests.swift
-//  AnxietyCounterTests
+//  AACounterTests.swift
+//  AACounterTests
 //
-//  Created by Mike Lee on 7/30/15.
+//  Created by Mike Lee on 7/31/15.
 //  Copyright (c) 2015 Mike Lee. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class AnxietyCounterTests: XCTestCase {
+class AACounterTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
