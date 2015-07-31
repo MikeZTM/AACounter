@@ -38,6 +38,7 @@
 		9E01802F1B6B1ADF00952742 /* AnxietyCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnxietyCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0180341B6B1ADF00952742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0180351B6B1ADF00952742 /* AnxietyCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyCounterTests.swift; sourceTree = "<group>"; };
+		9E0180451B6B257000952742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/CounterItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		9E0180191B6B1ADF00952742 /* AnxietyCounter */ = {
 			isa = PBXGroup;
 			children = (
+				9E0180431B6B251200952742 /* Data */,
 				9E01801C1B6B1ADF00952742 /* AppDelegate.swift */,
 				9E0180211B6B1ADF00952742 /* ViewController.swift */,
 				9E0180231B6B1ADF00952742 /* Main.storyboard */,
@@ -113,6 +115,14 @@
 				9E0180341B6B1ADF00952742 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9E0180431B6B251200952742 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9E0180441B6B257000952742 /* CounterItem.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +266,14 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
+		9E0180441B6B257000952742 /* CounterItem.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E0180451B6B257000952742 /* Base */,
+			);
+			name = CounterItem.swift;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -344,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AnxietyCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AnxietyCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
