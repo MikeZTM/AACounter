@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Mike Lee. All rights reserved.
 //
 
+import CoreData
 import UIKit
 
 class ViewController: UIViewController {
@@ -19,6 +20,11 @@ class ViewController: UIViewController {
 
         // Print it to the console
         println(managedObjectContext)
+        // new item
+        let newItem = NSEntityDescription.insertNewObjectForEntityForName("CounterItem", inManagedObjectContext: self.managedObjectContext!) as! CounterItem
+        
+        [NSDate date]
+        newItem.time=
     }
 
     override func didReceiveMemoryWarning() {

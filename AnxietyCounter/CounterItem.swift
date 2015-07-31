@@ -2,7 +2,7 @@
 //  CounterItem.swift
 //  
 //
-//  Created by Mike Lee on 7/30/15.
+//  Created by Mike Lee on 7/31/15.
 //
 //
 
@@ -11,7 +11,7 @@ import CoreData
 
 class CounterItem: NSManagedObject {
 
-    @NSManaged var time: NSNumber
+    @NSManaged var time: NSDate
     @NSManaged var loactionlatitude: NSNumber
     @NSManaged var locationlongitude: NSNumber
     @NSManaged var id: NSNumber
