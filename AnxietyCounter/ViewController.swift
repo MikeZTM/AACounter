@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // Retreive the managedObjectContext from AppDelegate
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        // Print it to the console
+        println(managedObjectContext)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +26,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

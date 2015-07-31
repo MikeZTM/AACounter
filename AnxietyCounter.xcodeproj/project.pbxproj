@@ -14,6 +14,7 @@
 		9E0180271B6B1ADF00952742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0180261B6B1ADF00952742 /* Images.xcassets */; };
 		9E01802A1B6B1ADF00952742 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0180281B6B1ADF00952742 /* LaunchScreen.xib */; };
 		9E0180361B6B1ADF00952742 /* AnxietyCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0180351B6B1ADF00952742 /* AnxietyCounterTests.swift */; };
+		9E0180471B6B2A3800952742 /* CounterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0180461B6B2A3800952742 /* CounterItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		9E01802F1B6B1ADF00952742 /* AnxietyCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnxietyCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0180341B6B1ADF00952742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0180351B6B1ADF00952742 /* AnxietyCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyCounterTests.swift; sourceTree = "<group>"; };
-		9E0180451B6B257000952742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/CounterItem.swift; sourceTree = "<group>"; };
+		9E0180461B6B2A3800952742 /* CounterItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +121,7 @@
 		9E0180431B6B251200952742 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9E0180441B6B257000952742 /* CounterItem.swift */,
+				9E0180461B6B2A3800952742 /* CounterItem.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -228,6 +229,7 @@
 				9E0180221B6B1ADF00952742 /* ViewController.swift in Sources */,
 				9E01801D1B6B1ADF00952742 /* AppDelegate.swift in Sources */,
 				9E0180201B6B1ADF00952742 /* AnxietyCounter.xcdatamodeld in Sources */,
+				9E0180471B6B2A3800952742 /* CounterItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,14 +266,6 @@
 				9E0180291B6B1ADF00952742 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		9E0180441B6B257000952742 /* CounterItem.swift */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E0180451B6B257000952742 /* Base */,
-			);
-			name = CounterItem.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
