@@ -14,7 +14,7 @@
 		9ECD64AF1B6B394F00C94FC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD64AE1B6B394F00C94FC0 /* Images.xcassets */; };
 		9ECD64B21B6B394F00C94FC0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD64B01B6B394F00C94FC0 /* LaunchScreen.xib */; };
 		9ECD64BE1B6B394F00C94FC0 /* AACounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64BD1B6B394F00C94FC0 /* AACounterTests.swift */; };
-		9ECD64C61B6B3A0B00C94FC0 /* CountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64C51B6B3A0B00C94FC0 /* CountItem.swift */; };
+		9ECD64C91B6B3F0E00C94FC0 /* CountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64C81B6B3F0E00C94FC0 /* CountItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,7 @@
 		9ECD64B71B6B394F00C94FC0 /* AACounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AACounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECD64BC1B6B394F00C94FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ECD64BD1B6B394F00C94FC0 /* AACounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AACounterTests.swift; sourceTree = "<group>"; };
-		9ECD64C51B6B3A0B00C94FC0 /* CountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountItem.swift; sourceTree = "<group>"; };
+		9ECD64C81B6B3F0E00C94FC0 /* CountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 		9ECD64C71B6B3A1600C94FC0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9ECD64C51B6B3A0B00C94FC0 /* CountItem.swift */,
+				9ECD64C81B6B3F0E00C94FC0 /* CountItem.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -229,8 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ECD64AA1B6B394F00C94FC0 /* ViewController.swift in Sources */,
+				9ECD64C91B6B3F0E00C94FC0 /* CountItem.swift in Sources */,
 				9ECD64A81B6B394F00C94FC0 /* AACounter.xcdatamodeld in Sources */,
-				9ECD64C61B6B3A0B00C94FC0 /* CountItem.swift in Sources */,
 				9ECD64A51B6B394F00C94FC0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
