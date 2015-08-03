@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A235d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="166-Q6-Z6S">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,17 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRa-C3-VWK">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Plus"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="72" width="368" height="185"/>
-                                </variation>
-                                <connections>
-                                    <action selector="plusClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bzf-Hh-8Zz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjL-H9-dOH">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -35,7 +25,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="268" width="368" height="134"/>
+                                    <rect key="frame" x="16" y="210" width="368" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="606" width="368" height="134"/>
@@ -44,10 +34,39 @@
                                     <action selector="printNow:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OdB-Cc-csm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRa-C3-VWK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="0"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="72" width="368" height="130"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="72" width="368" height="185"/>
+                                </variation>
+                                <connections>
+                                    <action selector="plusClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bzf-Hh-8Zz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isy-1V-PIN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Check">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="493" width="368" height="87"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="p9H-sS-arW" kind="show" id="e77-NX-T6g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Isy-1V-PIN" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="5sa-oG-Ref"/>
+                            <constraint firstItem="Isy-1V-PIN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7pQ-9U-qFf"/>
                             <constraint firstItem="PRa-C3-VWK" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Ao2-4v-epc"/>
                             <constraint firstItem="PRa-C3-VWK" firstAttribute="leading" secondItem="GjL-H9-dOH" secondAttribute="leading" id="HFl-mb-hSD"/>
                             <constraint firstItem="PRa-C3-VWK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="MZD-hL-6Tz"/>
@@ -55,14 +74,19 @@
                             <constraint firstItem="GjL-H9-dOH" firstAttribute="top" secondItem="PRa-C3-VWK" secondAttribute="bottom" constant="31" id="Ts3-5Q-Xtw">
                                 <variation key="widthClass=compact" constant="30"/>
                             </constraint>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Isy-1V-PIN" secondAttribute="bottom" constant="20" id="crB-aS-y8p"/>
+                            <constraint firstItem="Isy-1V-PIN" firstAttribute="top" secondItem="GjL-H9-dOH" secondAttribute="bottom" constant="99" id="hGJ-Wg-3rz"/>
+                            <constraint firstAttribute="centerX" secondItem="GjL-H9-dOH" secondAttribute="centerX" id="ikd-Ry-2Tk"/>
                             <constraint firstItem="PRa-C3-VWK" firstAttribute="trailing" secondItem="GjL-H9-dOH" secondAttribute="trailing" id="jHs-mO-F7T"/>
+                            <constraint firstAttribute="centerX" secondItem="Isy-1V-PIN" secondAttribute="centerX" id="qev-3A-Dsi"/>
                             <constraint firstItem="GjL-H9-dOH" firstAttribute="centerX" secondItem="PRa-C3-VWK" secondAttribute="centerX" id="wXW-jY-yVO"/>
                             <constraint firstItem="PRa-C3-VWK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="wYF-bn-w48"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="PRa-C3-VWK"/>
                                 <exclude reference="GjL-H9-dOH"/>
+                                <exclude reference="PRa-C3-VWK"/>
+                                <exclude reference="Isy-1V-PIN"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Ao2-4v-epc"/>
@@ -71,32 +95,66 @@
                                 <exclude reference="jHs-mO-F7T"/>
                                 <exclude reference="wYF-bn-w48"/>
                                 <exclude reference="Ts3-5Q-Xtw"/>
+                                <exclude reference="ikd-Ry-2Tk"/>
                                 <exclude reference="wXW-jY-yVO"/>
+                                <exclude reference="5sa-oG-Ref"/>
+                                <exclude reference="7pQ-9U-qFf"/>
+                                <exclude reference="hGJ-Wg-3rz"/>
+                                <exclude reference="qev-3A-Dsi"/>
                                 <exclude reference="Pn7-Q6-ax6"/>
+                                <exclude reference="crB-aS-y8p"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="PRa-C3-VWK"/>
                                 <include reference="GjL-H9-dOH"/>
+                                <include reference="PRa-C3-VWK"/>
+                                <include reference="Isy-1V-PIN"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Ao2-4v-epc"/>
-                                <include reference="HFl-mb-hSD"/>
+                                <exclude reference="HFl-mb-hSD"/>
                                 <include reference="MZD-hL-6Tz"/>
-                                <include reference="jHs-mO-F7T"/>
+                                <exclude reference="jHs-mO-F7T"/>
                                 <include reference="wYF-bn-w48"/>
                                 <include reference="Ts3-5Q-Xtw"/>
-                                <include reference="wXW-jY-yVO"/>
-                                <include reference="Pn7-Q6-ax6"/>
+                                <include reference="ikd-Ry-2Tk"/>
+                                <exclude reference="wXW-jY-yVO"/>
+                                <include reference="5sa-oG-Ref"/>
+                                <include reference="7pQ-9U-qFf"/>
+                                <exclude reference="hGJ-Wg-3rz"/>
+                                <include reference="qev-3A-Dsi"/>
+                                <exclude reference="Pn7-Q6-ax6"/>
+                                <include reference="crB-aS-y8p"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="2ws-f8-8dR"/>
+                    <connections>
+                        <outlet property="plusBtn" destination="PRa-C3-VWK" id="pzO-9P-EPF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1086" y="606"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="66v-v7-o4W">
+            <objects>
+                <viewController id="p9H-sS-arW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pea-Yz-7Z3"/>
+                        <viewControllerLayoutGuide type="bottom" id="mje-cM-JAj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OAE-S9-7cd">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDE-13-wIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948.5" y="606"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ciD-D1-61a">

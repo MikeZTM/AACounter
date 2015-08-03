@@ -11,6 +11,8 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var plusBtn: UIButton!
+    
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     override func viewDidLoad() {
@@ -21,12 +23,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-//        // Fetch from Core Data
-//        let fetchRequest = NSFetchRequest(entityName:"CountItem")
-//        var error: NSError?
-//        let fetchedResults =
-//        managedObjectContext!.executeFetchRequest(fetchRequest,
-//            error: &error) as? [NSManagedObject]
+        plusBtn.setTitle((countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,6 +37,8 @@ class ViewController: UIViewController {
         newItem.device="iPhone"
         newItem.lat=50.0;
         newItem.long=55.5;
+        plusBtn.setTitle((countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
+        
     }
     
     @IBAction func printNow(sender: AnyObject) {
@@ -70,6 +69,24 @@ class ViewController: UIViewController {
                 completion: nil)
         }
     }
+    
+    func countToday() -> Int {
+        // Create a new fetch request using the LogItem entity
+        let fetchRequest = NSFetchRequest(entityName: "CountItem")
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd-hh:mm" //format style. Browse online to get a format that fits your needs.
+        var predicate:NSPredicate = NSPredicate(format:"time >= %@", getStartTimeOfDay(NSDate()))
+        
+        fetchRequest.predicate=predicate
+        var error: NSError?
+        // Execute the fetch request, and cast the results to an array of LogItem objects
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [CountItem] {
+            return fetchResults.count
+        }
+        return 0
+    }
+    
     
     func getStartTimeOfDay(day: NSDate) -> NSDate{
         var now:NSDate = day
