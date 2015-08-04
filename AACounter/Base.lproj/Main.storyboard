@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AACounter-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AACounter" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,7 +136,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="2ws-f8-8dR"/>
+                    <navigationItem key="navigationItem" title="AACounter" id="2ws-f8-8dR"/>
                     <connections>
                         <outlet property="plusBtn" destination="PRa-C3-VWK" id="pzO-9P-EPF"/>
                     </connections>
@@ -227,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="1783.5" y="606"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NaviC-->
         <scene sceneID="ciD-D1-61a">
             <objects>
-                <navigationController id="166-Q6-Z6S" sceneMemberID="viewController">
+                <navigationController id="166-Q6-Z6S" customClass="NaviC" customModule="AACounter" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HD2-je-IyR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

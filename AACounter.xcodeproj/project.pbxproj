@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E438D161B702E3D00EBDF28 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E438D151B702E3D00EBDF28 /* ItemCell.swift */; };
+		9E438D181B70369800EBDF28 /* NaviC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E438D171B70369800EBDF28 /* NaviC.swift */; };
 		9EB3FE671B6FFD2200CA37E0 /* ListItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3FE661B6FFD2200CA37E0 /* ListItemVC.swift */; };
 		9ECD64A51B6B394F00C94FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64A41B6B394F00C94FC0 /* AppDelegate.swift */; };
 		9ECD64A81B6B394F00C94FC0 /* AACounter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64A61B6B394F00C94FC0 /* AACounter.xcdatamodeld */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		9E01804A1B6B389000952742 /* AACounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AACounter.entitlements; sourceTree = "<group>"; };
 		9E438D151B702E3D00EBDF28 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		9E438D171B70369800EBDF28 /* NaviC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviC.swift; sourceTree = "<group>"; };
 		9EB3FE661B6FFD2200CA37E0 /* ListItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemVC.swift; sourceTree = "<group>"; };
 		9ECD64A01B6B394F00C94FC0 /* AACounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AACounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECD64A31B6B394F00C94FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				9E438D151B702E3D00EBDF28 /* ItemCell.swift */,
 				9ECD64C71B6B3A1600C94FC0 /* Data */,
 				9ECD64A41B6B394F00C94FC0 /* AppDelegate.swift */,
+				9E438D171B70369800EBDF28 /* NaviC.swift */,
 				9EB3FE661B6FFD2200CA37E0 /* ListItemVC.swift */,
 				9ECD64A91B6B394F00C94FC0 /* ViewController.swift */,
 				9ECD64AB1B6B394F00C94FC0 /* Main.storyboard */,
@@ -237,6 +240,7 @@
 			files = (
 				9ECD64AA1B6B394F00C94FC0 /* ViewController.swift in Sources */,
 				9EB3FE671B6FFD2200CA37E0 /* ListItemVC.swift in Sources */,
+				9E438D181B70369800EBDF28 /* NaviC.swift in Sources */,
 				9E438D161B702E3D00EBDF28 /* ItemCell.swift in Sources */,
 				9ECD64C91B6B3F0E00C94FC0 /* CountItem.swift in Sources */,
 				9ECD64A81B6B394F00C94FC0 /* AACounter.xcdatamodeld in Sources */,
