@@ -16,7 +16,13 @@ class GlanceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
+        WKInterfaceController.openParentApplication(["request": "refreshData"],
+            reply: { (replyInfo, error) -> Void in
+                // TODO: process reply data
+                let countData = replyInfo["countData"] as? NSData
+                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!)
+                self.counter.setText(counts as! String)
+        })
         // Configure interface objects here.
     }
 

@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // Refresh
                     var today=(countToday() as NSNumber).stringValue
                     // reply
-                    reply(["coinData": NSKeyedArchiver.archivedDataWithRootObject(today)])
+                    reply(["countData": NSKeyedArchiver.archivedDataWithRootObject(today)])
                     return
                 }
             }
@@ -75,6 +75,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         components.second = 00
         var newDate:NSDate = calendar.dateFromComponents(components)!
         return newDate
+    }
+    
+    func plusOne() {
+        let newItem = NSEntityDescription.insertNewObjectForEntityForName("CountItem", inManagedObjectContext: self.managedObjectContext!) as! CountItem
+        newItem.time=NSDate()
+        newItem.device="iPhone"
+        newItem.lat=50.0;
+        newItem.long=55.5;
     }
     
     func applicationWillResignActive(application: UIApplication) {

@@ -14,10 +14,13 @@
                             <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" weight="semibold" pointSize="56"/>
                             <connections>
-                                <action selector="btnPress" destination="AgC-eL-Hgc" id="rIw-vC-yxz"/>
+                                <action selector="btnPress" destination="AgC-eL-Hgc" id="weI-QH-RuQ"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="btnCount" destination="m0m-2A-LL6" id="cGi-LM-LdI"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
@@ -29,7 +32,7 @@
                     <items>
                         <group alignment="left" id="t8f-Gd-c4y">
                             <items>
-                                <label width="1" alignment="left" verticalAlignment="bottom" text="Today" textAlignment="center" id="27M-a7-5Xx">
+                                <label width="1" alignment="right" verticalAlignment="center" text="Today" textAlignment="center" id="27M-a7-5Xx">
                                     <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="24"/>
                                 </label>
