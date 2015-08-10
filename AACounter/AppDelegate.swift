@@ -31,7 +31,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(application: UIApplication,
+        handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?,
+        reply: (([NSObject : AnyObject]!) -> Void)!) {
+            // Check request info
+            if let userInfo = userInfo, request = userInfo["request"] as? String {
+                if request == "refreshData" {
+                    // Refresh
+                    var today=(countToday() as NSNumber).stringValue
+                    // reply
+                    reply(["coinData": NSKeyedArchiver.archivedDataWithRootObject(today)])
+                    return
+                }
+            }
+            // return null
+            reply([:])
+    }
 
+    func countToday() -> Int {
+        // Create a new fetch request using the LogItem entity
+        let fetchRequest = NSFetchRequest(entityName: "CountItem")
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd-hh:mm" //format style. Browse online to get a format that fits your needs.
+        var predicate:NSPredicate = NSPredicate(format:"time >= %@", getStartTimeOfDay(NSDate()))
+        
+        fetchRequest.predicate=predicate
+        var error: NSError?
+        // Execute the fetch request, and cast the results to an array of LogItem objects
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [CountItem] {
+            return fetchResults.count
+        }
+        return 0
+    }
+    
+    func getStartTimeOfDay(day: NSDate) -> NSDate{
+        var now:NSDate = day
+        var calendar:NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        var components:NSDateComponents = calendar.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay, fromDate: now)
+        components.hour = 00
+        components.minute = 00
+        components.second = 00
+        var newDate:NSDate = calendar.dateFromComponents(components)!
+        return newDate
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

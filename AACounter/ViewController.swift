@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var plusBtn: UIButton!
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    let aacDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        plusBtn.setTitle((countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
+        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
         newItem.device="iPhone"
         newItem.lat=50.0;
         newItem.long=55.5;
-        plusBtn.setTitle((countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
+        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
         
     }
     
@@ -46,8 +47,8 @@ class ViewController: UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "CountItem")
         
         var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd-hh:mm" //format style. Browse online to get a format that fits your needs.
-        var predicate:NSPredicate = NSPredicate(format:"time >= %@", getStartTimeOfDay(NSDate()))
+        dateFormatter.dateFormat = "yyyy/MM/dd-hh:mm" //format style. 
+        var predicate:NSPredicate = NSPredicate(format:"time >= %@", aacDelegate.getStartTimeOfDay(NSDate()))
         
         fetchRequest.predicate=predicate
         var error: NSError?
@@ -68,35 +69,6 @@ class ViewController: UIViewController {
                 animated: true,
                 completion: nil)
         }
-    }
-    
-    func countToday() -> Int {
-        // Create a new fetch request using the LogItem entity
-        let fetchRequest = NSFetchRequest(entityName: "CountItem")
-        
-        var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd-hh:mm" //format style. Browse online to get a format that fits your needs.
-        var predicate:NSPredicate = NSPredicate(format:"time >= %@", getStartTimeOfDay(NSDate()))
-        
-        fetchRequest.predicate=predicate
-        var error: NSError?
-        // Execute the fetch request, and cast the results to an array of LogItem objects
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [CountItem] {
-            return fetchResults.count
-        }
-        return 0
-    }
-    
-    
-    func getStartTimeOfDay(day: NSDate) -> NSDate{
-        var now:NSDate = day
-        var calendar:NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
-        var components:NSDateComponents = calendar.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay, fromDate: now)
-        components.hour = 00
-        components.minute = 00
-        components.second = 00
-        var newDate:NSDate = calendar.dateFromComponents(components)!
-        return newDate
     }
 }
 

@@ -21,6 +21,11 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        WKInterfaceController.openParentApplication(["request": "refreshData"],
+            reply: { (replyInfo, error) -> Void in
+                // TODO: process reply data
+                NSLog("Reply: \(replyInfo)")
+        })
     }
 
     override func didDeactivate() {

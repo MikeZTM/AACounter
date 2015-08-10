@@ -84,7 +84,7 @@ class ListItemVC: UITableViewController {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "time", ascending: false)]
         
         
-        dateFormatter.dateFormat = "yyyy/MM/dd-hh:mm" //format style. Browse online to get a format that fits your needs.
+        dateFormatter.dateFormat = "yyyy/MM/dd-hh:mm" //format style. 
         var error: NSError?
         // Execute the fetch request, and cast the results to an array of LogItem objects
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [CountItem] {
