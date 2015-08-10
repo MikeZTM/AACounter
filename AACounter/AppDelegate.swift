@@ -25,9 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Sets shadow (line below the bar) to a blank image
         UINavigationBar.appearance().shadowImage = UIImage()
         // Sets the translucent background color
-        UINavigationBar.appearance().tintColor = UIColor.redColor()
+        UINavigationBar.appearance().tintColor = UIColor(red: (102/255.0), green: (204/255.0), blue: (255/255.0), alpha: 1.0)
         // Sets text color
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.redColor()]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: (102/255.0), green: (204/255.0), blue: (255/255.0), alpha: 1.0)]
         
         return true
     }

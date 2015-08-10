@@ -5,12 +5,18 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--AACounter-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AACounter_WatchKit_App" customModuleProvider="target">
+                <controller title="AACounter" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AACounter_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" height="1" alignment="left" title="Button" id="m0m-2A-LL6"/>
+                        <button width="1" height="1" alignment="left" title="0" id="m0m-2A-LL6">
+                            <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="56"/>
+                            <connections>
+                                <action selector="btnPress" destination="AgC-eL-Hgc" id="rIw-vC-yxz"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
@@ -21,10 +27,26 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="AACounter_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label width="1" alignment="left" verticalAlignment="bottom" text="Today" textAlignment="center" id="27M-a7-5Xx">
+                                    <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="24"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <label width="1" alignment="left" text="0" textAlignment="center" id="Ha5-J4-liU">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="56"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="counter" destination="Ha5-J4-liU" id="ZIP-QH-RuC"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="672"/>

@@ -15,7 +15,6 @@
 		9E1617101B793BC600695B3A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E16170E1B793BC600695B3A /* Interface.storyboard */; };
 		9E1617121B793BC600695B3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1617111B793BC600695B3A /* Images.xcassets */; };
 		9E1617151B793BC600695B3A /* AACounter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9E1616F81B793BC600695B3A /* AACounter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9E438D161B702E3D00EBDF28 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E438D151B702E3D00EBDF28 /* ItemCell.swift */; };
 		9E438D181B70369800EBDF28 /* NaviC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E438D171B70369800EBDF28 /* NaviC.swift */; };
 		9EB3FE671B6FFD2200CA37E0 /* ListItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3FE661B6FFD2200CA37E0 /* ListItemVC.swift */; };
 		9ECD64A51B6B394F00C94FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64A41B6B394F00C94FC0 /* AppDelegate.swift */; };
@@ -24,7 +23,6 @@
 		9ECD64AD1B6B394F00C94FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD64AB1B6B394F00C94FC0 /* Main.storyboard */; };
 		9ECD64AF1B6B394F00C94FC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD64AE1B6B394F00C94FC0 /* Images.xcassets */; };
 		9ECD64B21B6B394F00C94FC0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD64B01B6B394F00C94FC0 /* LaunchScreen.xib */; };
-		9ECD64BE1B6B394F00C94FC0 /* AACounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64BD1B6B394F00C94FC0 /* AACounterTests.swift */; };
 		9ECD64C91B6B3F0E00C94FC0 /* CountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64C81B6B3F0E00C94FC0 /* CountItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,13 +40,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9E1616F71B793BC600695B3A;
 			remoteInfo = "AACounter WatchKit Extension";
-		};
-		9ECD64B81B6B394F00C94FC0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9E01800F1B6B1ADF00952742 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9ECD649F1B6B394F00C94FC0;
-			remoteInfo = AACounter;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -79,7 +70,6 @@
 		9E16170D1B793BC600695B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E16170F1B793BC600695B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		9E1617111B793BC600695B3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9E438D151B702E3D00EBDF28 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		9E438D171B70369800EBDF28 /* NaviC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviC.swift; sourceTree = "<group>"; };
 		9EB3FE661B6FFD2200CA37E0 /* ListItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemVC.swift; sourceTree = "<group>"; };
 		9ECD64A01B6B394F00C94FC0 /* AACounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AACounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +80,6 @@
 		9ECD64AC1B6B394F00C94FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9ECD64AE1B6B394F00C94FC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9ECD64B11B6B394F00C94FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9ECD64B71B6B394F00C94FC0 /* AACounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AACounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECD64BC1B6B394F00C94FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ECD64BD1B6B394F00C94FC0 /* AACounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AACounterTests.swift; sourceTree = "<group>"; };
 		9ECD64C81B6B3F0E00C94FC0 /* CountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountItem.swift; sourceTree = "<group>"; };
@@ -105,13 +94,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9ECD649D1B6B394F00C94FC0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9ECD64B41B6B394F00C94FC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				9ECD64A01B6B394F00C94FC0 /* AACounter.app */,
-				9ECD64B71B6B394F00C94FC0 /* AACounterTests.xctest */,
 				9E1616F81B793BC600695B3A /* AACounter WatchKit Extension.appex */,
 				9E1617071B793BC600695B3A /* AACounter WatchKit App.app */,
 			);
@@ -186,7 +167,6 @@
 		9ECD64A11B6B394F00C94FC0 /* AACounter */ = {
 			isa = PBXGroup;
 			children = (
-				9E438D151B702E3D00EBDF28 /* ItemCell.swift */,
 				9ECD64C71B6B3A1600C94FC0 /* Data */,
 				9ECD64A41B6B394F00C94FC0 /* AppDelegate.swift */,
 				9E438D171B70369800EBDF28 /* NaviC.swift */,
@@ -289,24 +269,6 @@
 			productReference = 9ECD64A01B6B394F00C94FC0 /* AACounter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9ECD64B61B6B394F00C94FC0 /* AACounterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9ECD64C21B6B394F00C94FC0 /* Build configuration list for PBXNativeTarget "AACounterTests" */;
-			buildPhases = (
-				9ECD64B31B6B394F00C94FC0 /* Sources */,
-				9ECD64B41B6B394F00C94FC0 /* Frameworks */,
-				9ECD64B51B6B394F00C94FC0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9ECD64B91B6B394F00C94FC0 /* PBXTargetDependency */,
-			);
-			name = AACounterTests;
-			productName = AACounterTests;
-			productReference = 9ECD64B71B6B394F00C94FC0 /* AACounterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -326,10 +288,6 @@
 					9ECD649F1B6B394F00C94FC0 = {
 						CreatedOnToolsVersion = 6.4;
 					};
-					9ECD64B61B6B394F00C94FC0 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 9ECD649F1B6B394F00C94FC0;
-					};
 				};
 			};
 			buildConfigurationList = 9E0180121B6B1ADF00952742 /* Build configuration list for PBXProject "AACounter" */;
@@ -346,7 +304,6 @@
 			projectRoot = "";
 			targets = (
 				9ECD649F1B6B394F00C94FC0 /* AACounter */,
-				9ECD64B61B6B394F00C94FC0 /* AACounterTests */,
 				9E1616F71B793BC600695B3A /* AACounter WatchKit Extension */,
 				9E1617061B793BC600695B3A /* AACounter WatchKit App */,
 			);
@@ -382,13 +339,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9ECD64B51B6B394F00C94FC0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -409,18 +359,9 @@
 				9ECD64AA1B6B394F00C94FC0 /* ViewController.swift in Sources */,
 				9EB3FE671B6FFD2200CA37E0 /* ListItemVC.swift in Sources */,
 				9E438D181B70369800EBDF28 /* NaviC.swift in Sources */,
-				9E438D161B702E3D00EBDF28 /* ItemCell.swift in Sources */,
 				9ECD64C91B6B3F0E00C94FC0 /* CountItem.swift in Sources */,
 				9ECD64A81B6B394F00C94FC0 /* AACounter.xcdatamodeld in Sources */,
 				9ECD64A51B6B394F00C94FC0 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9ECD64B31B6B394F00C94FC0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9ECD64BE1B6B394F00C94FC0 /* AACounterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,11 +377,6 @@
 			isa = PBXTargetDependency;
 			target = 9E1616F71B793BC600695B3A /* AACounter WatchKit Extension */;
 			targetProxy = 9E1617131B793BC600695B3A /* PBXContainerItemProxy */;
-		};
-		9ECD64B91B6B394F00C94FC0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9ECD649F1B6B394F00C94FC0 /* AACounter */;
-			targetProxy = 9ECD64B81B6B394F00C94FC0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -635,40 +571,6 @@
 			};
 			name = Release;
 		};
-		9ECD64C31B6B394F00C94FC0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AACounterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AACounter.app/AACounter";
-			};
-			name = Debug;
-		};
-		9ECD64C41B6B394F00C94FC0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AACounterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AACounter.app/AACounter";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -688,6 +590,7 @@
 				9E1617191B793BC600695B3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E16171B1B793BC600695B3A /* Build configuration list for PBXNativeTarget "AACounter WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -696,21 +599,13 @@
 				9E1617171B793BC600695B3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9ECD64BF1B6B394F00C94FC0 /* Build configuration list for PBXNativeTarget "AACounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9ECD64C01B6B394F00C94FC0 /* Debug */,
 				9ECD64C11B6B394F00C94FC0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9ECD64C21B6B394F00C94FC0 /* Build configuration list for PBXNativeTarget "AACounterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9ECD64C31B6B394F00C94FC0 /* Debug */,
-				9ECD64C41B6B394F00C94FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

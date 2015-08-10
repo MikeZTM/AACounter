@@ -12,6 +12,8 @@ import Foundation
 
 class GlanceController: WKInterfaceController {
 
+    @IBOutlet weak var counter: WKInterfaceLabel!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         

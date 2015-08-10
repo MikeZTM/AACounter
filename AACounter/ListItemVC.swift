@@ -50,9 +50,9 @@ class ListItemVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
-        cell.time.text = dateFormatter.stringFromDate(items[indexPath.row].time)
-        cell.note.text = ""
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! UITableViewCell
+        cell.textLabel!.text = dateFormatter.stringFromDate(items[indexPath.row].time)
+        cell.detailTextLabel!.text = ""
         
         // Configure the cell...
         
