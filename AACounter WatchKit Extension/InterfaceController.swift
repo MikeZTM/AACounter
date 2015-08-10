@@ -16,15 +16,8 @@ class InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        WKInterfaceController.openParentApplication(["request": "refreshData"],
-            reply: { (replyInfo, error) -> Void in
-                // TODO: process reply data
-                let countData = replyInfo["countData"] as? NSData
-                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!)
-                self.btnCount.setTitle(counts as! String)
-        })
-        
-        // Configure interface objects here.
+        //App start
+        refreshCount()
     }
 
     override func willActivate() {
@@ -36,6 +29,28 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    func refreshCount() {
+        WKInterfaceController.openParentApplication(["request": "refreshData"],
+            reply: { (replyInfo, error) -> Void in
+                // TODO: process reply data
+                let countData = replyInfo["countData"] as? NSData
+                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!)
+                self.btnCount.setTitle(counts as! String)
+        })
+    }
+    
+    func plusOne(){
+        WKInterfaceController.openParentApplication(["request": "plusOne"],
+            reply: { (replyInfo, error) -> Void in
+                // TODO: process reply data
+                let countData = replyInfo["countData"] as? NSData
+                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!)
+                self.btnCount.setTitle(counts as! String)
+        })
+    }
+    
     @IBAction func btnPress() {
+        
     }
 }

@@ -16,14 +16,9 @@ class GlanceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        WKInterfaceController.openParentApplication(["request": "refreshData"],
-            reply: { (replyInfo, error) -> Void in
-                // TODO: process reply data
-                let countData = replyInfo["countData"] as? NSData
-                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!)
-                self.counter.setText(counts as! String)
-        })
-        // Configure interface objects here.
+        //init
+        refreshCount()
+        
     }
 
     override func willActivate() {
@@ -35,5 +30,14 @@ class GlanceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
+    func refreshCount() {
+        WKInterfaceController.openParentApplication(["request": "refreshData"],
+            reply: { (replyInfo, error) -> Void in
+                // TODO: process reply data
+                let countData = replyInfo["countData"] as? NSData
+                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!)
+                self.counter.setText(counts as! String)
+        })
+    }
 }

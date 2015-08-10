@@ -44,6 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     reply(["countData": NSKeyedArchiver.archivedDataWithRootObject(today)])
                     return
                 }
+                if request == "plusOne" {
+                    // Refresh
+                    plusOne()
+                    var today=(countToday() as NSNumber).stringValue
+                    // reply
+                    reply(["countData": NSKeyedArchiver.archivedDataWithRootObject(today)])
+                    return
+                }
             }
             // return null
             reply([:])
