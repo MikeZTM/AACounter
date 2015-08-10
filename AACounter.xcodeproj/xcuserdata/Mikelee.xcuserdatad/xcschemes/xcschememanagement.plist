@@ -4,10 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AACounter.xcscheme</key>
+		<key>AACounter WatchKit App.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>AACounter.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Glance - AACounter WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Notification - AACounter WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -18,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>9E01802E1B6B1ADF00952742</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E1617061B793BC600695B3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
