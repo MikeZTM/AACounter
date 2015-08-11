@@ -17,13 +17,14 @@ class GlanceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         //init
-        refreshCount()
         
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        refreshCount()
     }
 
     override func didDeactivate() {
