@@ -1,0 +1,18 @@
+
+/* Class = "UINavigationItem"; title = "AACounter"; ObjectID = "2ws-f8-8dR"; */
+"2ws-f8-8dR.title" = "AACounter";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "5zB-aD-v91"; */
+"5zB-aD-v91.text" = "詳細";
+
+/* Class = "UIButton"; normalTitle = "Check"; ObjectID = "Isy-1V-PIN"; */
+"Isy-1V-PIN.normalTitle" = "檢視詳細";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "PRa-C3-VWK"; */
+"PRa-C3-VWK.normalTitle" = "0";
+
+/* Class = "UITableViewController"; title = "List"; ObjectID = "ZTa-wg-B4Y"; */
+"ZTa-wg-B4Y.title" = "詳細列表";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "zFr-lA-Rud"; */
+"zFr-lA-Rud.text" = "標題";

@@ -1,0 +1,15 @@
+
+/* Class = "WKInterfaceLabel"; text = "Today"; ObjectID = "27M-a7-5Xx"; */
+"27M-a7-5Xx.text" = "今日";
+
+/* Class = "WKInterfaceController"; title = "AACounter"; ObjectID = "AgC-eL-Hgc"; */
+"AgC-eL-Hgc.title" = "AACounter";
+
+/* Class = "WKInterfaceLabel"; text = "0"; ObjectID = "Ha5-J4-liU"; */
+"Ha5-J4-liU.text" = "0";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "XkS-y5-khE"; */
+"XkS-y5-khE.text" = "Alert Label";
+
+/* Class = "WKInterfaceButton"; title = "0"; ObjectID = "m0m-2A-LL6"; */
+"m0m-2A-LL6.title" = "0";

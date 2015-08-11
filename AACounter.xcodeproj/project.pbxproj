@@ -69,6 +69,12 @@
 		9E01804A1B6B389000952742 /* AACounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AACounter.entitlements; sourceTree = "<group>"; };
 		9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WatchAppIcon.appiconset; sourceTree = "<group>"; };
 		9E158F571B79B5F700BEE159 /* iOSAppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iOSAppIcon.appiconset; sourceTree = "<group>"; };
+		9E158F5B1B79BC4000BEE159 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		9E158F5C1B79BC4000BEE159 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		9E158F5D1B79BC4000BEE159 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
+		9E158F5E1B79BC4700BEE159 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		9E158F5F1B79BC4700BEE159 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		9E158F601B79BC4700BEE159 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
 		9E1616F81B793BC600695B3A /* AACounter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AACounter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1616FB1B793BC600695B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E1616FC1B793BC600695B3A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -405,6 +411,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9E16170F1B793BC600695B3A /* Base */,
+				9E158F5D1B79BC4000BEE159 /* zh-Hans */,
+				9E158F601B79BC4700BEE159 /* zh-Hant */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -413,6 +421,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9ECD64AC1B6B394F00C94FC0 /* Base */,
+				9E158F5B1B79BC4000BEE159 /* zh-Hans */,
+				9E158F5E1B79BC4700BEE159 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -421,6 +431,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9ECD64B11B6B394F00C94FC0 /* Base */,
+				9E158F5C1B79BC4000BEE159 /* zh-Hans */,
+				9E158F5F1B79BC4700BEE159 /* zh-Hant */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
