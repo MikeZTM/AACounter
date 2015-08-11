@@ -73,7 +73,6 @@
 		9E01804A1B6B389000952742 /* AACounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AACounter.entitlements; sourceTree = "<group>"; };
 		9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WatchAppIcon.appiconset; sourceTree = "<group>"; };
 		9E158F571B79B5F700BEE159 /* iOSAppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iOSAppIcon.appiconset; sourceTree = "<group>"; };
-		9E158F5B1B79BC4000BEE159 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		9E158F5C1B79BC4000BEE159 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		9E158F5D1B79BC4000BEE159 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
 		9E158F5E1B79BC4700BEE159 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		9E8666261B7A82A4008C9199 /* CountPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountPlace.swift; sourceTree = "<group>"; };
 		9E8666281B7A99A8008C9199 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9E86662A1B7A9ECE008C9199 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9E86662F1B7ABEE1008C9199 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		9EB3FE661B6FFD2200CA37E0 /* ListItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemVC.swift; sourceTree = "<group>"; };
 		9ECD64A01B6B394F00C94FC0 /* AACounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AACounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECD64A31B6B394F00C94FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -317,6 +317,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 9E01800E1B6B1ADF00952742;
 			productRefGroup = 9E0180181B6B1ADF00952742 /* Products */;
@@ -425,8 +426,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9ECD64AC1B6B394F00C94FC0 /* Base */,
-				9E158F5B1B79BC4000BEE159 /* zh-Hans */,
 				9E158F5E1B79BC4700BEE159 /* zh-Hant */,
+				9E86662F1B7ABEE1008C9199 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -5,14 +5,23 @@
 /* Class = "UILabel"; text = "Detail"; ObjectID = "5zB-aD-v91"; */
 "5zB-aD-v91.text" = "詳細";
 
+/* Class = "UIViewController"; title = "Detail"; ObjectID = "GGY-eR-fUO"; */
+"GGY-eR-fUO.title" = "詳細";
+
 /* Class = "UIButton"; normalTitle = "Check"; ObjectID = "Isy-1V-PIN"; */
-"Isy-1V-PIN.normalTitle" = "檢視詳細";
+"Isy-1V-PIN.normalTitle" = "檢視列表";
 
 /* Class = "UIButton"; normalTitle = "0"; ObjectID = "PRa-C3-VWK"; */
 "PRa-C3-VWK.normalTitle" = "0";
 
 /* Class = "UITableViewController"; title = "List"; ObjectID = "ZTa-wg-B4Y"; */
-"ZTa-wg-B4Y.title" = "詳細列表";
+"ZTa-wg-B4Y.title" = "列表";
+
+/* Class = "UITextField"; placeholder = "Enter note here"; ObjectID = "jan-Rl-BZI"; */
+"jan-Rl-BZI.placeholder" = "在此输入笔记";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uZh-b6-4EN"; */
+"uZh-b6-4EN.text" = "標籤";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "zFr-lA-Rud"; */
 "zFr-lA-Rud.text" = "標題";

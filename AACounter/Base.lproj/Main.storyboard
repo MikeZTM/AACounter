@@ -182,10 +182,10 @@
             </objects>
             <point key="canvasLocation" x="1783.5" y="606"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detail-->
         <scene sceneID="wl0-J6-Umf">
             <objects>
-                <viewController id="GGY-eR-fUO" customClass="DetailViewController" customModule="AACounter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" id="GGY-eR-fUO" customClass="DetailViewController" customModule="AACounter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gaW-7l-7HL"/>
                         <viewControllerLayoutGuide type="bottom" id="Ojr-Os-Arz"/>
@@ -203,6 +203,16 @@
                                     <rect key="frame" x="16" y="425" width="368" height="65"/>
                                 </variation>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter note here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jan-Rl-BZI">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editEnd:" destination="GGY-eR-fUO" eventType="editingDidEnd" id="kKz-cn-2nt"/>
+                                    <action selector="editNote:" destination="GGY-eR-fUO" eventType="editingChanged" id="7n9-Ml-QTE"/>
+                                </connections>
+                            </textField>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Aka-rX-y4s">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
@@ -222,16 +232,6 @@
                                     </mask>
                                 </variation>
                             </mapView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter note here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jan-Rl-BZI">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="editEnd:" destination="GGY-eR-fUO" eventType="editingDidEnd" id="kKz-cn-2nt"/>
-                                    <action selector="editNote:" destination="GGY-eR-fUO" eventType="editingChanged" id="7n9-Ml-QTE"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -257,8 +257,8 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="uZh-b6-4EN"/>
-                                <exclude reference="Aka-rX-y4s"/>
                                 <exclude reference="jan-Rl-BZI"/>
+                                <exclude reference="Aka-rX-y4s"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="5e0-G5-nh2"/>
@@ -279,8 +279,8 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="uZh-b6-4EN"/>
-                                <include reference="Aka-rX-y4s"/>
                                 <include reference="jan-Rl-BZI"/>
+                                <include reference="Aka-rX-y4s"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="5e0-G5-nh2"/>

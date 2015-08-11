@@ -46,7 +46,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func plusClick(sender: AnyObject) {
         aacDelegate.plusOne(locationManager.location.coordinate)
-        NSLog("lat: %0.0f", locationManager.location.coordinate.latitude);
         plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
         
     }
