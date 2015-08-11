@@ -17,12 +17,12 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         //App start
-        refreshCount()
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        refreshCount()
     }
 
     override func didDeactivate() {
@@ -51,6 +51,6 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func btnPress() {
-        
+        plusOne()
     }
 }

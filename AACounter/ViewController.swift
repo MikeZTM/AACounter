@@ -24,6 +24,15 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
         plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "appCameToForeground:",
+            name: UIApplicationWillEnterForegroundNotification,
+            object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,6 +49,10 @@ class ViewController: UIViewController {
     @IBAction func printNow(sender: AnyObject) {
         // Create a new fetch request using the LogItem entity
         
+    }
+    
+    func appCameToForeground(notification: NSNotification){
+        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
     }
 }
 
