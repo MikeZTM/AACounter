@@ -224,6 +224,9 @@
                                         <include reference="58R-i5-9Z9"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="btnNotePress:" destination="GGY-eR-fUO" eventType="touchUpInside" id="vuK-vh-BJp"/>
+                                </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Aka-rX-y4s">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -315,7 +318,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btnNote" destination="F9y-rS-mhr" id="GwR-rd-bH6"/>
                         <outlet property="mapView" destination="Aka-rX-y4s" id="6NZ-IG-oGw"/>
+                        <outlet property="titleLabel" destination="uZh-b6-4EN" id="TZC-me-rJl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIb-8P-wcg" userLabel="First Responder" sceneMemberID="firstResponder"/>

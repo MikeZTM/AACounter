@@ -26,6 +26,8 @@
 		9E438D181B70369800EBDF28 /* NaviC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E438D171B70369800EBDF28 /* NaviC.swift */; };
 		9E8666251B7A79C1008C9199 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8666241B7A79C1008C9199 /* DetailViewController.swift */; };
 		9E8666271B7A82A4008C9199 /* CountPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8666261B7A82A4008C9199 /* CountPlace.swift */; };
+		9E8666291B7A99A8008C9199 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8666281B7A99A8008C9199 /* CoreLocation.framework */; };
+		9E86662B1B7A9ECE008C9199 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86662A1B7A9ECE008C9199 /* MapKit.framework */; };
 		9EB3FE671B6FFD2200CA37E0 /* ListItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3FE661B6FFD2200CA37E0 /* ListItemVC.swift */; };
 		9ECD64A51B6B394F00C94FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64A41B6B394F00C94FC0 /* AppDelegate.swift */; };
 		9ECD64A81B6B394F00C94FC0 /* AACounter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64A61B6B394F00C94FC0 /* AACounter.xcdatamodeld */; };
@@ -91,6 +93,8 @@
 		9E438D171B70369800EBDF28 /* NaviC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviC.swift; sourceTree = "<group>"; };
 		9E8666241B7A79C1008C9199 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9E8666261B7A82A4008C9199 /* CountPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountPlace.swift; sourceTree = "<group>"; };
+		9E8666281B7A99A8008C9199 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9E86662A1B7A9ECE008C9199 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9EB3FE661B6FFD2200CA37E0 /* ListItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemVC.swift; sourceTree = "<group>"; };
 		9ECD64A01B6B394F00C94FC0 /* AACounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AACounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECD64A31B6B394F00C94FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,8 +104,6 @@
 		9ECD64AC1B6B394F00C94FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9ECD64AE1B6B394F00C94FC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9ECD64B11B6B394F00C94FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9ECD64BC1B6B394F00C94FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9ECD64BD1B6B394F00C94FC0 /* AACounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AACounterTests.swift; sourceTree = "<group>"; };
 		9ECD64C81B6B3F0E00C94FC0 /* CountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E86662B1B7A9ECE008C9199 /* MapKit.framework in Frameworks */,
+				9E8666291B7A99A8008C9199 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,11 +130,12 @@
 		9E01800E1B6B1ADF00952742 = {
 			isa = PBXGroup;
 			children = (
+				9E86662A1B7A9ECE008C9199 /* MapKit.framework */,
+				9E8666281B7A99A8008C9199 /* CoreLocation.framework */,
 				9E01804A1B6B389000952742 /* AACounter.entitlements */,
 				9E158F571B79B5F700BEE159 /* iOSAppIcon.appiconset */,
 				9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */,
 				9ECD64A11B6B394F00C94FC0 /* AACounter */,
-				9ECD64BA1B6B394F00C94FC0 /* AACounterTests */,
 				9E1616F91B793BC600695B3A /* AACounter WatchKit Extension */,
 				9E16170B1B793BC600695B3A /* AACounter WatchKit App */,
 				9E0180181B6B1ADF00952742 /* Products */,
@@ -209,23 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				9ECD64A31B6B394F00C94FC0 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9ECD64BA1B6B394F00C94FC0 /* AACounterTests */ = {
-			isa = PBXGroup;
-			children = (
-				9ECD64BD1B6B394F00C94FC0 /* AACounterTests.swift */,
-				9ECD64BB1B6B394F00C94FC0 /* Supporting Files */,
-			);
-			path = AACounterTests;
-			sourceTree = "<group>";
-		};
-		9ECD64BB1B6B394F00C94FC0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9ECD64BC1B6B394F00C94FC0 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -314,6 +302,11 @@
 					9ECD649F1B6B394F00C94FC0 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 4UNYR6375C;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

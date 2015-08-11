@@ -8,15 +8,19 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var plusBtn: UIButton!
+    var locationManager : CLLocationManager!
+    var coord : CLLocationCoordinate2D?
     
     let aacDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initLocationManager()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -41,13 +45,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusClick(sender: AnyObject) {
-        aacDelegate.plusOne()
+        aacDelegate.plusOne(locationManager.location.coordinate)
+        NSLog("lat: %0.0f", locationManager.location.coordinate.latitude);
         plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
         
     }
     
     func appCameToForeground(notification: NSNotification){
         plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
+    }
+    
+    func initLocationManager() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]!) {
+        coord = manager.location.coordinate
     }
 }
 

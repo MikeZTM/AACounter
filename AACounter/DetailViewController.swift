@@ -13,19 +13,27 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     let regionRadius: CLLocationDistance = 1000
+    var _item:CountItem?
+    var dateFormatter = NSDateFormatter()
+    @IBOutlet weak var btnNote: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
-        centerMapOnLocation(initialLocation)
-        // show artwork on map
-        let pin = CountPlace(title: "8:50",
+        let loc = CLLocation(latitude: _item!.lat as Double, longitude: _item!.long as Double)
+        centerMapOnLocation(loc)
+        // show pin on map
+        dateFormatter.dateFormat = "yyyy/MM/dd hh:mm"
+        let pin = CountPlace(title: dateFormatter.stringFromDate(_item!.time),
             locationName: "",
             discipline: "",
-            coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
-        
+            coordinate: CLLocationCoordinate2D(latitude: _item!.lat as Double, longitude: _item!.long as Double))
         mapView.addAnnotation(pin)
+        
+        // edit label
+        titleLabel.text = dateFormatter.stringFromDate(_item!.time)
+        btnNote.setTitle(_item?.device, forState: UIControlState.Normal)
         // Do any additional setup after loading the view.
     }
 
@@ -40,6 +48,14 @@ class DetailViewController: UIViewController {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+    func setItem(val:CountItem) {
+        _item = val
+    }
+    
+    @IBAction func btnNotePress(sender: AnyObject) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -49,5 +65,4 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

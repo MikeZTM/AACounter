@@ -91,6 +91,14 @@ class ListItemVC: UITableViewController {
             items = fetchResults
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "ShowDetail") {
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            let vc:DetailViewController = segue.destinationViewController as! DetailViewController
+            vc.setItem(items[indexPath!.row])
+        }
+    }
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {

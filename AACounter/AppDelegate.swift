@@ -8,26 +8,15 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
+    var window : UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // Set translucent. (Default value is already true, so this can be removed if desired.)
-//        UINavigationBar.appearance().translucent = true
-        // Sets background to a blank/empty image
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        // Sets shadow (line below the bar) to a blank image
-//        UINavigationBar.appearance().shadowImage = UIImage()
-        // Sets the translucent background color
-//        UINavigationBar.appearance().tintColor = UIColor(red: (102/255.0), green: (204/255.0), blue: (255/255.0), alpha: 1.0)
-//        // Sets text color
-//        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: (102/255.0), green: (204/255.0), blue: (255/255.0), alpha: 1.0)]
         
         return true
     }
@@ -46,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 if request == "plusOne" {
                     // Refresh
-                    plusOne()
+                    plusOne(nil) // TODO
                     var today=(countToday() as NSNumber).stringValue
                     // reply
                     reply(["countData": NSKeyedArchiver.archivedDataWithRootObject(today)])
@@ -85,12 +74,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return newDate
     }
     
-    func plusOne() {
+    func plusOne(coord: CLLocationCoordinate2D?) {
         let newItem = NSEntityDescription.insertNewObjectForEntityForName("CountItem", inManagedObjectContext: self.managedObjectContext!) as! CountItem
         newItem.time=NSDate()
-        newItem.device="iPhone"
-        newItem.lat=50.0;
-        newItem.long=55.5;
+        newItem.device=""
+        if let _coord = coord{
+            newItem.lat = _coord.latitude
+            newItem.long = _coord.longitude
+        }else{
+            newItem.lat = 0.0
+            newItem.long = 0.0
+        }
     }
     
     func applicationWillResignActive(application: UIApplication) {
