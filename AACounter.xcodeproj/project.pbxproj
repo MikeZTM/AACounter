@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E158F4D1B79B52300BEE159 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD64AE1B6B394F00C94FC0 /* Images.xcassets */; };
+		9E158F4E1B79B52400BEE159 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD64AE1B6B394F00C94FC0 /* Images.xcassets */; };
+		9E158F541B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */; };
+		9E158F551B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */; };
+		9E158F561B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */; };
+		9E158F581B79B5F700BEE159 /* iOSAppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 9E158F571B79B5F700BEE159 /* iOSAppIcon.appiconset */; };
+		9E158F591B79B5F700BEE159 /* iOSAppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 9E158F571B79B5F700BEE159 /* iOSAppIcon.appiconset */; };
+		9E158F5A1B79B5F700BEE159 /* iOSAppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 9E158F571B79B5F700BEE159 /* iOSAppIcon.appiconset */; };
 		9E1616FE1B793BC600695B3A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1616FD1B793BC600695B3A /* InterfaceController.swift */; };
 		9E1617001B793BC600695B3A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1616FF1B793BC600695B3A /* NotificationController.swift */; };
 		9E1617021B793BC600695B3A /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1617011B793BC600695B3A /* GlanceController.swift */; };
@@ -59,6 +67,8 @@
 
 /* Begin PBXFileReference section */
 		9E01804A1B6B389000952742 /* AACounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AACounter.entitlements; sourceTree = "<group>"; };
+		9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WatchAppIcon.appiconset; sourceTree = "<group>"; };
+		9E158F571B79B5F700BEE159 /* iOSAppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iOSAppIcon.appiconset; sourceTree = "<group>"; };
 		9E1616F81B793BC600695B3A /* AACounter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AACounter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1616FB1B793BC600695B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E1616FC1B793BC600695B3A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -107,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				9E01804A1B6B389000952742 /* AACounter.entitlements */,
+				9E158F571B79B5F700BEE159 /* iOSAppIcon.appiconset */,
+				9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */,
 				9ECD64A11B6B394F00C94FC0 /* AACounter */,
 				9ECD64BA1B6B394F00C94FC0 /* AACounterTests */,
 				9E1616F91B793BC600695B3A /* AACounter WatchKit Extension */,
@@ -315,6 +327,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E158F591B79B5F700BEE159 /* iOSAppIcon.appiconset in Resources */,
+				9E158F551B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */,
+				9E158F4D1B79B52300BEE159 /* Images.xcassets in Resources */,
 				9E1617041B793BC600695B3A /* Images.xcassets in Resources */,
 				9E1617081B793BC600695B3A /* AACounter WatchKit App.app in Resources */,
 			);
@@ -324,6 +339,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E158F5A1B79B5F700BEE159 /* iOSAppIcon.appiconset in Resources */,
+				9E158F561B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */,
+				9E158F4E1B79B52400BEE159 /* Images.xcassets in Resources */,
 				9E1617101B793BC600695B3A /* Interface.storyboard in Resources */,
 				9E1617121B793BC600695B3A /* Images.xcassets in Resources */,
 			);
@@ -333,6 +351,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E158F581B79B5F700BEE159 /* iOSAppIcon.appiconset in Resources */,
+				9E158F541B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */,
 				9ECD64AD1B6B394F00C94FC0 /* Main.storyboard in Resources */,
 				9ECD64B21B6B394F00C94FC0 /* LaunchScreen.xib in Resources */,
 				9ECD64AF1B6B394F00C94FC0 /* Images.xcassets in Resources */,
@@ -518,7 +538,7 @@
 		9E1617181B793BC600695B3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -539,7 +559,7 @@
 		9E1617191B793BC600695B3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				IBSC_MODULE = AACounter_WatchKit_Extension;
 				INFOPLIST_FILE = "AACounter WatchKit App/Info.plist";
@@ -555,7 +575,7 @@
 		9ECD64C01B6B394F00C94FC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = iOSAppIcon;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -569,7 +589,7 @@
 		9ECD64C11B6B394F00C94FC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = iOSAppIcon;
 				INFOPLIST_FILE = AACounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
