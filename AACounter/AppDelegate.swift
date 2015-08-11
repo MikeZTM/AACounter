@@ -32,18 +32,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // reply
                     reply(["countData": NSKeyedArchiver.archivedDataWithRootObject(today)])
                     return
-                }
-                if request == "plusOne" {
-                    // Refresh
-                    plusOne(nil) // TODO
-                    var today=(countToday() as NSNumber).stringValue
-                    // reply
-                    reply(["countData": NSKeyedArchiver.archivedDataWithRootObject(today)])
-                    return
-                }
+                } 
+            }
+            if let userInfo = userInfo, request = userInfo["plus"] as? NSData{
+                let loc = userInfo["plus"] as? NSData
+                let location = NSKeyedUnarchiver.unarchiveObjectWithData(loc!) as! CLLocation
+                plusOne(location.coordinate)
+                var today=(countToday() as NSNumber).stringValue
+                // reply
+                reply(["countData": NSKeyedArchiver.archivedDataWithRootObject(today)])
+                return
             }
             // return null
-            reply([:])
+            reply(["countData":NSKeyedArchiver.archivedDataWithRootObject("Err")])
     }
 
     func countToday() -> Int {

@@ -8,14 +8,21 @@
 
 import WatchKit
 import Foundation
+import CoreLocation
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
 
     @IBOutlet weak var btnCount: WKInterfaceButton!
+    let locationManager = CLLocationManager()
+    var coord : CLLocationCoordinate2D?
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+        locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
         //App start
     }
 
@@ -35,22 +42,28 @@ class InterfaceController: WKInterfaceController {
             reply: { (replyInfo, error) -> Void in
                 // TODO: process reply data
                 let countData = replyInfo["countData"] as? NSData
-                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!)
-                self.btnCount.setTitle(counts as! String)
+                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!) as! String
+                self.btnCount.setTitle(counts)
         })
     }
     
     func plusOne(){
-        WKInterfaceController.openParentApplication(["request": "plusOne"],
+        let location = locationManager.location
+        WKInterfaceController.openParentApplication(["plus": NSKeyedArchiver.archivedDataWithRootObject(location)],
             reply: { (replyInfo, error) -> Void in
                 // TODO: process reply data
                 let countData = replyInfo["countData"] as? NSData
-                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!)
-                self.btnCount.setTitle(counts as! String)
+                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!) as! String
+                self.btnCount.setTitle(counts)
         })
     }
     
     @IBAction func btnPress() {
+        locationManager.startUpdatingLocation()
         plusOne()
+    }
+    
+    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]!) {
+        coord = manager.location.coordinate
     }
 }
