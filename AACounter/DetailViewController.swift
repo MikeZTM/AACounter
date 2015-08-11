@@ -9,14 +9,15 @@
 import UIKit
 import MapKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     let regionRadius: CLLocationDistance = 1000
     var _item:CountItem?
     var dateFormatter = NSDateFormatter()
-    @IBOutlet weak var btnNote: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var noteInput: UITextField!
+    @IBOutlet weak var keyboardSpace: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,14 @@ class DetailViewController: UIViewController {
         
         // edit label
         titleLabel.text = dateFormatter.stringFromDate(_item!.time)
-        btnNote.setTitle(_item?.device, forState: UIControlState.Normal)
+        noteInput.text = _item?.device
+        noteInput.returnKeyType = .Done
+        noteInput.delegate = self
+        
+        
+        // keyboard layout
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillChangeFrameNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -52,10 +60,43 @@ class DetailViewController: UIViewController {
         _item = val
     }
     
-    @IBAction func btnNotePress(sender: AnyObject) {
-        
+    @IBAction func editNote(sender: AnyObject) {
+        _item?.device = noteInput.text
     }
     
+    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+    @IBAction func editEnd(sender: AnyObject) {
+       _item?.device = noteInput.text
+    }
+    
+    func keyboardWillShow(notification: NSNotification){
+        let info: NSDictionary = notification.userInfo!
+        let kbFrame: NSValue = info.objectForKey(UIKeyboardFrameEndUserInfoKey) as! NSValue
+        let animationDuration: NSTimeInterval = info.objectForKey(UIKeyboardAnimationDurationUserInfoKey)!.doubleValue
+        let keyboardFrame:CGRect = kbFrame.CGRectValue()
+        let height: CGFloat = keyboardFrame.size.height
+        // Because the "space" is actually the difference between the bottom lines of the 2 views,
+        // we need to set a negative constant value here.
+        self.keyboardSpace.constant = 50 + height;
+        
+        UIView.animateWithDuration(animationDuration, animations: {
+            self.view.layoutIfNeeded
+        })
+    }
+    
+    func keyboardWillHide(notification: NSNotification){
+        let info: NSDictionary = notification.userInfo!
+        let animationDuration: NSTimeInterval = info.objectForKey(UIKeyboardAnimationDurationUserInfoKey)!.doubleValue
+        self.keyboardSpace.constant = 50;
+        UIView.animateWithDuration(animationDuration, animations: {
+            self.view.layoutIfNeeded
+        })
+    }
     /*
     // MARK: - Navigation
 
