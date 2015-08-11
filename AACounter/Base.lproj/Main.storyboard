@@ -18,26 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjL-H9-dOH">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Crash!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="606" width="368" height="134"/>
-                                </variation>
-                                <connections>
-                                    <action selector="printNow:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OdB-Cc-csm"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isy-1V-PIN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uSb-tB-6mQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Check">
                                     <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uSb-tB-6mQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="uSb-tB-6mQ"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="ZTa-wg-B4Y" kind="show" id="HXy-Fi-d9z"/>
                                 </connections>
@@ -48,7 +49,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="269" id="xzf-VO-pht"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="102"/>
                                 <state key="normal" title="0">
                                     <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -76,65 +77,43 @@
                             <constraint firstItem="Isy-1V-PIN" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="5sa-oG-Ref"/>
                             <constraint firstItem="Isy-1V-PIN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7pQ-9U-qFf"/>
                             <constraint firstItem="PRa-C3-VWK" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Ao2-4v-epc"/>
-                            <constraint firstItem="PRa-C3-VWK" firstAttribute="leading" secondItem="GjL-H9-dOH" secondAttribute="leading" id="HFl-mb-hSD"/>
                             <constraint firstItem="PRa-C3-VWK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="MZD-hL-6Tz"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PRa-C3-VWK" secondAttribute="bottom" constant="398" id="Pn7-Q6-ax6"/>
-                            <constraint firstItem="GjL-H9-dOH" firstAttribute="top" secondItem="PRa-C3-VWK" secondAttribute="bottom" constant="31" id="Ts3-5Q-Xtw">
-                                <variation key="widthClass=compact" constant="30"/>
-                            </constraint>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Isy-1V-PIN" secondAttribute="bottom" constant="20" id="crB-aS-y8p"/>
-                            <constraint firstItem="Isy-1V-PIN" firstAttribute="top" secondItem="GjL-H9-dOH" secondAttribute="bottom" constant="99" id="hGJ-Wg-3rz"/>
-                            <constraint firstAttribute="centerX" secondItem="GjL-H9-dOH" secondAttribute="centerX" id="ikd-Ry-2Tk"/>
-                            <constraint firstItem="PRa-C3-VWK" firstAttribute="trailing" secondItem="GjL-H9-dOH" secondAttribute="trailing" id="jHs-mO-F7T"/>
                             <constraint firstAttribute="centerX" secondItem="Isy-1V-PIN" secondAttribute="centerX" id="qev-3A-Dsi"/>
-                            <constraint firstItem="GjL-H9-dOH" firstAttribute="centerX" secondItem="PRa-C3-VWK" secondAttribute="centerX" id="wXW-jY-yVO"/>
                             <constraint firstItem="PRa-C3-VWK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="wYF-bn-w48">
                                 <variation key="widthClass=compact" constant="30"/>
                             </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="GjL-H9-dOH"/>
                                 <exclude reference="Isy-1V-PIN"/>
                                 <exclude reference="PRa-C3-VWK"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Pn7-Q6-ax6"/>
                                 <exclude reference="crB-aS-y8p"/>
-                                <exclude reference="Ts3-5Q-Xtw"/>
-                                <exclude reference="ikd-Ry-2Tk"/>
-                                <exclude reference="wXW-jY-yVO"/>
                                 <exclude reference="5sa-oG-Ref"/>
                                 <exclude reference="7pQ-9U-qFf"/>
-                                <exclude reference="hGJ-Wg-3rz"/>
                                 <exclude reference="qev-3A-Dsi"/>
                                 <exclude reference="Ao2-4v-epc"/>
-                                <exclude reference="HFl-mb-hSD"/>
                                 <exclude reference="MZD-hL-6Tz"/>
-                                <exclude reference="jHs-mO-F7T"/>
                                 <exclude reference="wYF-bn-w48"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="GjL-H9-dOH"/>
                                 <include reference="Isy-1V-PIN"/>
                                 <include reference="PRa-C3-VWK"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Pn7-Q6-ax6"/>
                                 <include reference="crB-aS-y8p"/>
-                                <include reference="Ts3-5Q-Xtw"/>
-                                <include reference="ikd-Ry-2Tk"/>
-                                <exclude reference="wXW-jY-yVO"/>
                                 <include reference="5sa-oG-Ref"/>
                                 <include reference="7pQ-9U-qFf"/>
-                                <exclude reference="hGJ-Wg-3rz"/>
                                 <include reference="qev-3A-Dsi"/>
                                 <include reference="Ao2-4v-epc"/>
-                                <exclude reference="HFl-mb-hSD"/>
                                 <include reference="MZD-hL-6Tz"/>
-                                <exclude reference="jHs-mO-F7T"/>
                                 <include reference="wYF-bn-w48"/>
                             </mask>
                         </variation>
@@ -203,10 +182,15 @@
         <scene sceneID="ciD-D1-61a">
             <objects>
                 <navigationController id="166-Q6-Z6S" customClass="NaviC" customModule="AACounter" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HD2-je-IyR">
+                    <navigationBar key="navigationBar" opaque="NO" alpha="0.5" contentMode="scaleToFill" barStyle="black" id="HD2-je-IyR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.30963192714093962" green="0.68399225183288592" blue="0.98225146812080533" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="dCW-To-xeo"/>

@@ -13,9 +13,10 @@ class NaviC: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-//        self.navigationBar.shadowImage = UIImage()
-//        self.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.6)
-        self.navigationBar.translucent = true
+////        self.navigationBar.shadowImage = UIImage()
+//        self.navigationBar.backgroundColor = UIColor(red: (102/255.0), green: (204/255.0), blue: (255/255.0), alpha: 1.0)
+//        self.navigationBar.barStyle = UIBarStyle.Black
+//        self.navigationBar.translucent = true
         // Do any additional setup after loading the view.
     }
 

@@ -19,15 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Set translucent. (Default value is already true, so this can be removed if desired.)
-        UINavigationBar.appearance().translucent = true
+//        UINavigationBar.appearance().translucent = true
         // Sets background to a blank/empty image
 //        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
         // Sets shadow (line below the bar) to a blank image
-        UINavigationBar.appearance().shadowImage = UIImage()
+//        UINavigationBar.appearance().shadowImage = UIImage()
         // Sets the translucent background color
-        UINavigationBar.appearance().tintColor = UIColor(red: (102/255.0), green: (204/255.0), blue: (255/255.0), alpha: 1.0)
-        // Sets text color
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: (102/255.0), green: (204/255.0), blue: (255/255.0), alpha: 1.0)]
+//        UINavigationBar.appearance().tintColor = UIColor(red: (102/255.0), green: (204/255.0), blue: (255/255.0), alpha: 1.0)
+//        // Sets text color
+//        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: (102/255.0), green: (204/255.0), blue: (255/255.0), alpha: 1.0)]
         
         return true
     }

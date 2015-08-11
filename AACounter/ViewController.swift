@@ -46,11 +46,6 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func printNow(sender: AnyObject) {
-        // Create a new fetch request using the LogItem entity
-        
-    }
-    
     func appCameToForeground(notification: NSNotification){
         plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
     }
