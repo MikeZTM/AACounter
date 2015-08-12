@@ -6,5 +6,5 @@
   Copyright (c) 2015 Mike Lee. All rights reserved.
 */
 
-"Date_Format" = "MMM dd,yyyy hh:mm";
+"Date_Format" = "MMM dd, yyyy hh:mm";
 "Time_Format" = "hh:mm";
