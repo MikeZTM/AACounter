@@ -191,6 +191,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ojr-Os-Arz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="geC-Om-hgI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZh-b6-4EN">
@@ -199,9 +200,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="425" width="368" height="65"/>
-                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter note here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jan-Rl-BZI">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -226,8 +224,7 @@
                                         <exclude reference="naY-9z-W0k"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="427"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="naY-9z-W0k"/>
                                     </mask>
@@ -262,19 +259,19 @@
                                 <exclude reference="Aka-rX-y4s"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5e0-G5-nh2"/>
-                                <exclude reference="7WZ-p6-Z6f"/>
-                                <exclude reference="xkh-1J-xyb"/>
+                                <exclude reference="CKO-ib-G2E"/>
+                                <exclude reference="9Y1-yc-Roa"/>
+                                <exclude reference="Mq6-G3-9cB"/>
+                                <exclude reference="iNM-Pp-DpA"/>
+                                <exclude reference="sEs-L1-g8p"/>
                                 <exclude reference="437-fw-Vgs"/>
                                 <exclude reference="5dj-9r-Cfr"/>
                                 <exclude reference="Jkp-hw-rk8"/>
                                 <exclude reference="k4M-CZ-v1n"/>
                                 <exclude reference="kRv-l8-M2k"/>
-                                <exclude reference="9Y1-yc-Roa"/>
-                                <exclude reference="Mq6-G3-9cB"/>
-                                <exclude reference="iNM-Pp-DpA"/>
-                                <exclude reference="sEs-L1-g8p"/>
-                                <exclude reference="CKO-ib-G2E"/>
+                                <exclude reference="5e0-G5-nh2"/>
+                                <exclude reference="7WZ-p6-Z6f"/>
+                                <exclude reference="xkh-1J-xyb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -284,19 +281,19 @@
                                 <include reference="Aka-rX-y4s"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5e0-G5-nh2"/>
-                                <include reference="7WZ-p6-Z6f"/>
-                                <include reference="xkh-1J-xyb"/>
+                                <include reference="CKO-ib-G2E"/>
+                                <include reference="9Y1-yc-Roa"/>
+                                <include reference="Mq6-G3-9cB"/>
+                                <include reference="iNM-Pp-DpA"/>
+                                <include reference="sEs-L1-g8p"/>
                                 <include reference="437-fw-Vgs"/>
                                 <exclude reference="5dj-9r-Cfr"/>
                                 <include reference="Jkp-hw-rk8"/>
                                 <include reference="k4M-CZ-v1n"/>
                                 <include reference="kRv-l8-M2k"/>
-                                <include reference="9Y1-yc-Roa"/>
-                                <include reference="Mq6-G3-9cB"/>
-                                <include reference="iNM-Pp-DpA"/>
-                                <include reference="sEs-L1-g8p"/>
-                                <include reference="CKO-ib-G2E"/>
+                                <include reference="5e0-G5-nh2"/>
+                                <include reference="7WZ-p6-Z6f"/>
+                                <include reference="xkh-1J-xyb"/>
                             </mask>
                         </variation>
                     </view>

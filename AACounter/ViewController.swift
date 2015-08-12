@@ -13,7 +13,7 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var plusBtn: UIButton!
-    var locationManager : CLLocationManager!
+    var locationManager : CLLocationManager?
     var coord : CLLocationCoordinate2D?
     
     let aacDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -45,7 +45,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func plusClick(sender: AnyObject) {
-        aacDelegate.plusOne(locationManager.location.coordinate)
+        if let location = locationManager?.location {
+            aacDelegate.plusOne(location.coordinate)
+        }else{
+            aacDelegate.plusOne(nil)
+        }
         plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
         
     }
@@ -56,11 +60,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func initLocationManager() {
         locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
+        locationManager!.delegate = self
+        locationManager!.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager!.requestWhenInUseAuthorization()
+        locationManager!.startUpdatingLocation()
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]!) {
