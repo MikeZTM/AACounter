@@ -47,7 +47,7 @@ class ListItemVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath)
         cell.textLabel!.text = dateFormatter.stringFromDate(items[indexPath.row].time)
         cell.detailTextLabel!.text = items[indexPath.row].device
         
@@ -82,7 +82,6 @@ class ListItemVC: UITableViewController {
         
         
         dateFormatter.dateFormat =  NSLocalizedString("Date_Format", comment: "") //format style.
-        var error: NSError?
         // Execute the fetch request, and cast the results to an array of LogItem objects
         do{
             if let fetchResults = try managedObjectContext!.executeFetchRequest(fetchRequest) as? [CountItem] {

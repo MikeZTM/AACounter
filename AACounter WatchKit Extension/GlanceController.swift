@@ -38,7 +38,7 @@ class GlanceController: WKInterfaceController {
                 // TODO: process reply data
                 let countData = replyInfo["countData"] as? NSData
                 let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!)
-                self.counter.setText(counts as! String)
+                self.counter.setText(counts as? String)
         })
     }
 }

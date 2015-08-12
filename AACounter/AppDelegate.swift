@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 } 
             }
             if let userInfo = userInfo, request = userInfo["plus"] as? NSData{
-                let loc = userInfo["plus"] as? NSData
-                let location = NSKeyedUnarchiver.unarchiveObjectWithData(loc!) as! CLLocation
+                let loc = request
+                let location = NSKeyedUnarchiver.unarchiveObjectWithData(loc) as! CLLocation
                 plusOne(location.coordinate)
                 let today=(countToday() as NSNumber).stringValue
                 // reply
@@ -56,7 +56,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let predicate:NSPredicate = NSPredicate(format:"time >= %@", getStartTimeOfDay(NSDate()))
         
         fetchRequest.predicate=predicate
-        var error: NSError?
         // Execute the fetch request, and cast the results to an array of LogItem objects
         do{
             if let fetchResults = try managedObjectContext!.executeFetchRequest(fetchRequest) as? [CountItem] {

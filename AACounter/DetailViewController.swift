@@ -69,7 +69,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         _item?.device = noteInput.text!
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed.
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed.
     {
         textField.resignFirstResponder()
         return true;
