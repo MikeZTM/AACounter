@@ -18,6 +18,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var noteInput: UITextField!
     @IBOutlet weak var keyboardSpace: NSLayoutConstraint!
+    var itemListVC: ListItemVC?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         let loc = CLLocation(latitude: _item!.lat as Double, longitude: _item!.long as Double)
         centerMapOnLocation(loc)
         // show pin on map
-        dateFormatter.dateFormat = "yyyy/MM/dd hh:mm"
+        dateFormatter.dateFormat = NSLocalizedString("Date_Format", comment: "")
         let pin = CountPlace(title: dateFormatter.stringFromDate(_item!.time),
             locationName: "",
             discipline: "",
@@ -48,6 +49,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setItemList(list: ListItemVC){
+        self.itemListVC = list
     }
     
     func centerMapOnLocation(location: CLLocation) {
@@ -96,6 +101,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         UIView.animateWithDuration(animationDuration, animations: {
             self.view.layoutIfNeeded
         })
+    }
+    
+    override func viewWillDisappear(animated:Bool){
+        if let itemListVC = itemListVC {
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                itemListVC.tableView.reloadData()
+            })
+        }
+        super.viewWillDisappear(animated)
     }
     /*
     // MARK: - Navigation

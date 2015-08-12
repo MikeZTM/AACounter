@@ -28,6 +28,7 @@
 		9E8666271B7A82A4008C9199 /* CountPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8666261B7A82A4008C9199 /* CountPlace.swift */; };
 		9E8666291B7A99A8008C9199 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8666281B7A99A8008C9199 /* CoreLocation.framework */; };
 		9E86662B1B7A9ECE008C9199 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86662A1B7A9ECE008C9199 /* MapKit.framework */; };
+		9E8666411B7ACA96008C9199 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E8666431B7ACA96008C9199 /* Localizable.strings */; };
 		9EB3FE671B6FFD2200CA37E0 /* ListItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3FE661B6FFD2200CA37E0 /* ListItemVC.swift */; };
 		9ECD64A51B6B394F00C94FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64A41B6B394F00C94FC0 /* AppDelegate.swift */; };
 		9ECD64A81B6B394F00C94FC0 /* AACounter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64A61B6B394F00C94FC0 /* AACounter.xcdatamodeld */; };
@@ -97,6 +98,10 @@
 		9E86662F1B7ABEE1008C9199 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		9E8666311B7ABFFD008C9199 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		9E8666331B7AC008008C9199 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
+		9E8666421B7ACA96008C9199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9E8666441B7ACA9B008C9199 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9E8666451B7ACA9D008C9199 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		9E8666461B7ACA9E008C9199 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9EB3FE661B6FFD2200CA37E0 /* ListItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemVC.swift; sourceTree = "<group>"; };
 		9ECD64A01B6B394F00C94FC0 /* AACounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AACounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECD64A31B6B394F00C94FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +213,7 @@
 				9ECD64A61B6B394F00C94FC0 /* AACounter.xcdatamodeld */,
 				9ECD64A21B6B394F00C94FC0 /* Supporting Files */,
 				9E8666261B7A82A4008C9199 /* CountPlace.swift */,
+				9E8666431B7ACA96008C9199 /* Localizable.strings */,
 			);
 			path = AACounter;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 9E01800E1B6B1ADF00952742;
 			productRefGroup = 9E0180181B6B1ADF00952742 /* Products */;
@@ -365,6 +372,7 @@
 				9E158F581B79B5F700BEE159 /* iOSAppIcon.appiconset in Resources */,
 				9E158F541B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */,
 				9ECD64AD1B6B394F00C94FC0 /* Main.storyboard in Resources */,
+				9E8666411B7ACA96008C9199 /* Localizable.strings in Resources */,
 				9ECD64B21B6B394F00C94FC0 /* LaunchScreen.xib in Resources */,
 				9ECD64AF1B6B394F00C94FC0 /* Images.xcassets in Resources */,
 			);
@@ -423,6 +431,17 @@
 				9E8666331B7AC008008C9199 /* en */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		9E8666431B7ACA96008C9199 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E8666421B7ACA96008C9199 /* Base */,
+				9E8666441B7ACA9B008C9199 /* en */,
+				9E8666451B7ACA9D008C9199 /* zh-Hans */,
+				9E8666461B7ACA9E008C9199 /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		9ECD64AB1B6B394F00C94FC0 /* Main.storyboard */ = {

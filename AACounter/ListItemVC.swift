@@ -18,9 +18,6 @@ class ListItemVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.automaticallyAdjustsScrollViewInsets = true
-//        self.extendedLayoutIncludesOpaqueBars = false
-        
         fetchData()
         
         // Uncomment the following line to preserve selection between presentations
@@ -52,7 +49,7 @@ class ListItemVC: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel!.text = dateFormatter.stringFromDate(items[indexPath.row].time)
-        cell.detailTextLabel!.text = ""
+        cell.detailTextLabel!.text = items[indexPath.row].device
         
         // Configure the cell...
         
@@ -84,7 +81,7 @@ class ListItemVC: UITableViewController {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "time", ascending: false)]
         
         
-        dateFormatter.dateFormat = "yyyy/MM/dd-hh:mm" //format style. 
+        dateFormatter.dateFormat =  NSLocalizedString("Date_Format", comment: "") //format style. 
         var error: NSError?
         // Execute the fetch request, and cast the results to an array of LogItem objects
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [CountItem] {
@@ -97,6 +94,7 @@ class ListItemVC: UITableViewController {
             let indexPath = self.tableView.indexPathForSelectedRow()
             let vc:DetailViewController = segue.destinationViewController as! DetailViewController
             vc.setItem(items[indexPath!.row])
+            vc.setItemList(self)
         }
     }
     /*

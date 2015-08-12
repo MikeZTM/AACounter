@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  AACounter
+
+  Created by Mike Lee on 8/11/15.
+  Copyright (c) 2015 Mike Lee. All rights reserved.
+*/
+
+"Date_Format" = "MMM dd,yyyy hh:mm";
+"Time_Format" = "hh:mm";
