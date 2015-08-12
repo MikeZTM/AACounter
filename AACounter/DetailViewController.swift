@@ -66,7 +66,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func editNote(sender: AnyObject) {
-        _item?.device = noteInput.text
+        _item?.device = noteInput.text!
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed.
@@ -76,7 +76,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func editEnd(sender: AnyObject) {
-       _item?.device = noteInput.text
+       _item?.device = noteInput.text!
     }
     
     func keyboardWillShow(notification: NSNotification){

@@ -9,7 +9,7 @@
 import MapKit
 
 class CountPlace: NSObject, MKAnnotation {
-    let title: String
+    let title: String?
     let locationName: String
     let discipline: String
     let coordinate: CLLocationCoordinate2D
@@ -23,7 +23,7 @@ class CountPlace: NSObject, MKAnnotation {
         super.init()
     }
     
-    var subtitle: String {
+    var subtitle: String? {
         return locationName
     }
 }

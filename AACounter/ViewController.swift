@@ -66,8 +66,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager!.startUpdatingLocation()
     }
     
-    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]!) {
-        coord = manager.location.coordinate
+    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
+        coord = manager.location!.coordinate
     }
 }
 

@@ -23,12 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication,
         handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?,
-        reply: (([NSObject : AnyObject]!) -> Void)!) {
+        reply: (([NSObject : AnyObject]?) -> Void)) {
             // Check request info
             if let userInfo = userInfo, request = userInfo["request"] as? String {
                 if request == "refreshData" {
                     // Refresh
-                    var today=(countToday() as NSNumber).stringValue
+                    let today=(countToday() as NSNumber).stringValue
                     // reply
                     reply(["countData": NSKeyedArchiver.archivedDataWithRootObject(today)])
                     return
@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let loc = userInfo["plus"] as? NSData
                 let location = NSKeyedUnarchiver.unarchiveObjectWithData(loc!) as! CLLocation
                 plusOne(location.coordinate)
-                var today=(countToday() as NSNumber).stringValue
+                let today=(countToday() as NSNumber).stringValue
                 // reply
                 reply(["countData": NSKeyedArchiver.archivedDataWithRootObject(today)])
                 return
@@ -51,27 +51,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Create a new fetch request using the LogItem entity
         let fetchRequest = NSFetchRequest(entityName: "CountItem")
         
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd-hh:mm" //format style. Browse online to get a format that fits your needs.
-        var predicate:NSPredicate = NSPredicate(format:"time >= %@", getStartTimeOfDay(NSDate()))
+        let predicate:NSPredicate = NSPredicate(format:"time >= %@", getStartTimeOfDay(NSDate()))
         
         fetchRequest.predicate=predicate
         var error: NSError?
         // Execute the fetch request, and cast the results to an array of LogItem objects
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [CountItem] {
-            return fetchResults.count
+        do{
+            if let fetchResults = try managedObjectContext!.executeFetchRequest(fetchRequest) as? [CountItem] {
+                return fetchResults.count
+            }
+        }catch{
         }
         return 0
     }
     
     func getStartTimeOfDay(day: NSDate) -> NSDate{
-        var now:NSDate = day
-        var calendar:NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
-        var components:NSDateComponents = calendar.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay, fromDate: now)
+        let now:NSDate = day
+        let calendar:NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        let components:NSDateComponents = calendar.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day], fromDate: now)
         components.hour = 00
         components.minute = 00
         components.second = 00
-        var newDate:NSDate = calendar.dateFromComponents(components)!
+        let newDate:NSDate = calendar.dateFromComponents(components)!
         return newDate
     }
     
@@ -117,7 +120,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "org.zasaz.AACounter" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as! NSURL
+        return urls[urls.count-1] 
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -133,7 +136,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("AACounter.sqlite")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        do {
+            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } catch var error1 as NSError {
+            error = error1
             coordinator = nil
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -145,6 +151,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")
             abort()
+        } catch {
+            fatalError()
         }
         
         return coordinator
@@ -166,11 +174,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func saveContext () {
         if let moc = self.managedObjectContext {
             var error: NSError? = nil
-            if moc.hasChanges && !moc.save(&error) {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                NSLog("Unresolved error \(error), \(error!.userInfo)")
-                abort()
+            if moc.hasChanges {
+                do {
+                    try moc.save()
+                } catch let error1 as NSError {
+                    error = error1
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    NSLog("Unresolved error \(error), \(error!.userInfo)")
+                    abort()
+                }
             }
         }
     }

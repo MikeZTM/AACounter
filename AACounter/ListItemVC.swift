@@ -81,19 +81,23 @@ class ListItemVC: UITableViewController {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "time", ascending: false)]
         
         
-        dateFormatter.dateFormat =  NSLocalizedString("Date_Format", comment: "") //format style. 
+        dateFormatter.dateFormat =  NSLocalizedString("Date_Format", comment: "") //format style.
         var error: NSError?
         // Execute the fetch request, and cast the results to an array of LogItem objects
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [CountItem] {
-            items = fetchResults
+        do{
+            if let fetchResults = try managedObjectContext!.executeFetchRequest(fetchRequest) as? [CountItem] {
+                items = fetchResults
+            }
+        }catch{
+            
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "ShowDetail") {
-            let indexPath = self.tableView.indexPathForSelectedRow()
+            let indexPath = self.tableView.indexPathForSelectedRow!
             let vc:DetailViewController = segue.destinationViewController as! DetailViewController
-            vc.setItem(items[indexPath!.row])
+            vc.setItem(items[indexPath.row])
             vc.setItemList(self)
         }
     }
