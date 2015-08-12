@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E158F4D1B79B52300BEE159 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD64AE1B6B394F00C94FC0 /* Images.xcassets */; };
-		9E158F4E1B79B52400BEE159 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD64AE1B6B394F00C94FC0 /* Images.xcassets */; };
 		9E158F541B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */; };
 		9E158F551B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */; };
 		9E158F561B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 9E158F531B79B5EE00BEE159 /* WatchAppIcon.appiconset */; };
@@ -347,7 +345,6 @@
 			files = (
 				9E158F591B79B5F700BEE159 /* iOSAppIcon.appiconset in Resources */,
 				9E158F551B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */,
-				9E158F4D1B79B52300BEE159 /* Images.xcassets in Resources */,
 				9E1617041B793BC600695B3A /* Images.xcassets in Resources */,
 				9E1617081B793BC600695B3A /* AACounter WatchKit App.app in Resources */,
 			);
@@ -359,7 +356,6 @@
 			files = (
 				9E158F5A1B79B5F700BEE159 /* iOSAppIcon.appiconset in Resources */,
 				9E158F561B79B5EE00BEE159 /* WatchAppIcon.appiconset in Resources */,
-				9E158F4E1B79B52400BEE159 /* Images.xcassets in Resources */,
 				9E1617101B793BC600695B3A /* Interface.storyboard in Resources */,
 				9E1617121B793BC600695B3A /* Images.xcassets in Resources */,
 			);
