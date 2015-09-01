@@ -50,7 +50,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     func plusOne(){
         var location:CLLocation?
         if let loc = locationManager.location{
-            location = locationManager.location
+            location = loc
         }else{
             location = CLLocation(latitude: 0.0, longitude: 0.0)
         }
@@ -70,6 +70,6 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]!) {
-        coord = manager.location.coordinate
+        coord = manager.location!.coordinate
     }
 }
