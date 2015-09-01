@@ -90,7 +90,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         self.keyboardSpace.constant = 50 + height;
         
         UIView.animateWithDuration(animationDuration, animations: {
-            self.view.layoutIfNeeded
+            self.view.layoutIfNeeded()
         })
     }
     
@@ -99,7 +99,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         let animationDuration: NSTimeInterval = info.objectForKey(UIKeyboardAnimationDurationUserInfoKey)!.doubleValue
         self.keyboardSpace.constant = 50;
         UIView.animateWithDuration(animationDuration, animations: {
-            self.view.layoutIfNeeded
+            self.view.layoutIfNeeded()
         })
     }
     
