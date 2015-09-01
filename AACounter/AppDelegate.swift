@@ -68,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func getStartTimeOfDay(day: NSDate) -> NSDate{
         let now:NSDate = day
-        let calendar:NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        let calendar:NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
         let components:NSDateComponents = calendar.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day], fromDate: now)
         components.hour = 00
         components.minute = 00
