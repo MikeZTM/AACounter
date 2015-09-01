@@ -48,7 +48,13 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     }
     
     func plusOne(){
-        let location = locationManager.location
+        var location:CLLocation?
+        if let loc = locationManager.location{
+            location = loc
+        }else{
+            location = CLLocation(latitude: 0.0, longitude: 0.0)
+        }
+        
         WKInterfaceController.openParentApplication(["plus": NSKeyedArchiver.archivedDataWithRootObject(location!)],
             reply: { (replyInfo, error) -> Void in
                 // TODO: process reply data
@@ -63,7 +69,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         plusOne()
     }
     
-    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         coord = manager.location!.coordinate
     }
 }
