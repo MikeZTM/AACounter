@@ -21,6 +21,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         initLocationManager()
+        if(aacDelegate.shortcut==true){
+            self.plusClick(self)
+            aacDelegate.shortcut=false
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     

@@ -14,10 +14,16 @@ class ListItemVC: UITableViewController {
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var items = [CountItem]()
     var dateFormatter = NSDateFormatter()
+    var highlight:NSIndexPath?
+    var peekVC:DetailViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if #available(iOS 9.0, *) {
+            registerForPreviewingWithDelegate(self, sourceView: view)
+        } else {
+            // Fallback on earlier versions
+        }
         fetchData()
         
         // Uncomment the following line to preserve selection between presentations
@@ -74,6 +80,10 @@ class ListItemVC: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        highlight=indexPath;
+    }
+    
     
     func fetchData(){
         // Create a new fetch request using the LogItem entity
@@ -125,4 +135,37 @@ class ListItemVC: UITableViewController {
     }
     */
     
+}
+
+@available(iOS 9.0, *)
+extension ListItemVC:UIViewControllerPreviewingDelegate{
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing,
+        viewControllerForLocation location: CGPoint) -> UIViewController? {
+            if let indexPath = highlight {
+                
+                let asset:CountItem = items[indexPath.row]
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let peekController:DetailViewController = storyboard.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+                let cellFrame = tableView.cellForRowAtIndexPath(indexPath)!.frame
+                previewingContext.sourceRect = view.convertRect(cellFrame, fromView: tableView)
+                peekController.setItem(asset)
+                peekController.setItemList(self)
+                peekVC=peekController
+                return peekController
+            }else{
+                return nil
+            }
+    }
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController)
+    {
+        if let peekController = peekVC {
+            self.showViewController(peekController, sender: self)
+            return
+        }else{
+            dismissViewControllerAnimated(true, completion: nil)
+            return
+        }
+    }
 }

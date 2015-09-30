@@ -120,4 +120,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+//    @available(iOS 9.0, *)
+//    var previewActions: [UIPreviewActionItem]
+//        {
+//            return [UIPreviewAction(title: "Remove",
+//                style: UIPreviewActionStyle.Default,
+//                handler:
+//                {
+//                    (previewAction, viewController) in (viewController as? PeekViewController)?.toggleFavourite()
+//            })]
+//    }
 }
