@@ -87,7 +87,7 @@ class ListItemVC: UITableViewController {
     
     func fetchData(){
         // Create a new fetch request using the LogItem entity
-        let fetchRequest = NSFetchRequest(entityName: "CountItem")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CountItem")
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "time", ascending: false)]
         
         

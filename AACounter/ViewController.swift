@@ -34,7 +34,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, for: UIControlState())
         
         NotificationCenter.default.addObserver(self,
-            selector: "appCameToForeground:",
+            selector: #selector(ViewController.appCameToForeground(_:)),
             name: NSNotification.Name.UIApplicationWillEnterForeground,
             object: nil)
     }

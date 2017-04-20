@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         handleWatchKitExtensionRequest userInfo: [AnyHashable: Any]?,
         reply: (@escaping ([AnyHashable: Any]?) -> Void)) {
             // Check request info
-            if let userInfo = userInfo, request = userInfo["request"] as? String {
+            if let userInfo = userInfo, let request = userInfo["request"] as? String {
                 if request == "refreshData" {
                     // Refresh
                     let today=(countToday() as NSNumber).stringValue
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     return
                 }
             }
-            if let userInfo = userInfo, request = userInfo["plus"] as? Data{
+            if let userInfo = userInfo, let request = userInfo["plus"] as? Data{
                 let loc = request
                 let location = NSKeyedUnarchiver.unarchiveObject(with: loc) as! CLLocation
                 plusOne(location.coordinate)
@@ -81,11 +81,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func countToday() -> Int {
         // Create a new fetch request using the LogItem entity
-        let fetchRequest = NSFetchRequest(entityName: "CountItem")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CountItem")
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd-hh:mm" //format style. Browse online to get a format that fits your needs.
-        let predicate:NSPredicate = NSPredicate(format:"time >= %@", getStartTimeOfDay(Date()))
+        let predicate:NSPredicate = NSPredicate(format:"time >= %@", getStartTimeOfDay(Date()) as CVarArg)
         
         fetchRequest.predicate=predicate
         // Execute the fetch request, and cast the results to an array of LogItem objects
@@ -100,8 +100,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func getStartTimeOfDay(_ day: Date) -> Date{
         let now:Date = day
-        let calendar:Calendar = Calendar(identifier: Calendar.Identifier.gregorian)!
-        let components:DateComponents = (calendar as NSCalendar).components([NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day], from: now)
+        let calendar:Calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        var components:DateComponents = (calendar as NSCalendar).components([NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day], from: now)
         components.hour = 00
         components.minute = 00
         components.second = 00
@@ -114,8 +114,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         newItem.time=Date()
         newItem.device=""
         if let _coord = coord{
-            newItem.lat = _coord.latitude
-            newItem.long = _coord.longitude
+            newItem.lat = NSNumber(value: _coord.latitude)
+            newItem.long = NSNumber(value: _coord.longitude)
         }else{
             newItem.lat = 0.0
             newItem.long = 0.0
@@ -174,13 +174,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             coordinator = nil
             // Report any error we got.
             var dict = [String: AnyObject]()
-            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
-            dict[NSLocalizedFailureReasonErrorKey] = failureReason
+            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data" as AnyObject
+            dict[NSLocalizedFailureReasonErrorKey] = failureReason as AnyObject
             dict[NSUnderlyingErrorKey] = error
             error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
             // Replace this with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog("Unresolved error \(error), \(error!.userInfo)")
+            NSLog("Unresolved error \(String(describing: error)), \(error!.userInfo)")
             abort()
         } catch {
             fatalError()
@@ -212,7 +212,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     error = error1
                     // Replace this implementation with code to handle the error appropriately.
                     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                    NSLog("Unresolved error \(error), \(error!.userInfo)")
+                    NSLog("Unresolved error \(String(describing: error)), \(error!.userInfo)")
                     abort()
                 }
             }
