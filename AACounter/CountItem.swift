@@ -12,7 +12,7 @@ import CoreData
 class CountItem: NSManagedObject {
 
     @NSManaged var device: String
-    @NSManaged var time: NSDate
+    @NSManaged var time: Date
     @NSManaged var lat: NSNumber
     @NSManaged var long: NSNumber
     @NSManaged var id: NSNumber

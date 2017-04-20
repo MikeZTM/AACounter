@@ -16,7 +16,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager : CLLocationManager?
     var coord : CLLocationCoordinate2D?
     
-    let aacDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let aacDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,19 +28,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
+        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, for: UIControlState())
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
+        NotificationCenter.default.addObserver(self,
             selector: "appCameToForeground:",
-            name: UIApplicationWillEnterForegroundNotification,
+            name: NSNotification.Name.UIApplicationWillEnterForeground,
             object: nil)
     }
     
-    override func viewDidDisappear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,18 +48,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func plusClick(sender: AnyObject) {
+    @IBAction func plusClick(_ sender: AnyObject) {
         if let location = locationManager?.location {
             aacDelegate.plusOne(location.coordinate)
         }else{
             aacDelegate.plusOne(nil)
         }
-        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
+        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, for: UIControlState())
         
     }
     
-    func appCameToForeground(notification: NSNotification){
-        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, forState: UIControlState.Normal)
+    func appCameToForeground(_ notification: Notification){
+        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, for: UIControlState())
     }
     
     func initLocationManager() {
@@ -70,7 +70,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager!.startUpdatingLocation()
     }
     
-    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
+    func locationManager(_ manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         coord = manager.location!.coordinate
     }
 }

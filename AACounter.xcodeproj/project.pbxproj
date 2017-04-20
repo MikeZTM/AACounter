@@ -291,14 +291,17 @@
 					9E1616F71B793BC600695B3A = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 4UNYR6375C;
+						LastSwiftMigration = 0830;
 					};
 					9E1617061B793BC600695B3A = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 4UNYR6375C;
+						LastSwiftMigration = 0830;
 					};
 					9ECD649F1B6B394F00C94FC0 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 4UNYR6375C;
+						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -546,6 +549,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -559,6 +563,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -581,6 +586,7 @@
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
@@ -600,6 +606,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
@@ -620,6 +627,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.zasaz.AACounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -634,6 +642,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.zasaz.AACounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

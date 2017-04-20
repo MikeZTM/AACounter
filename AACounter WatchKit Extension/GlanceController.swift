@@ -14,8 +14,8 @@ class GlanceController: WKInterfaceController {
 
     @IBOutlet weak var counter: WKInterfaceLabel!
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         //init
         
     }
@@ -36,8 +36,8 @@ class GlanceController: WKInterfaceController {
         WKInterfaceController.openParentApplication(["request": "refreshData"],
             reply: { (replyInfo, error) -> Void in
                 // TODO: process reply data
-                let countData = replyInfo["countData"] as? NSData
-                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!)
+                let countData = replyInfo["countData"] as? Data
+                let counts = NSKeyedUnarchiver.unarchiveObject(with: countData!)
                 self.counter.setText(counts as? String)
         })
     }

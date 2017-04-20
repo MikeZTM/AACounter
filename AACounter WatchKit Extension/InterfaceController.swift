@@ -17,8 +17,8 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var coord : CLLocationCoordinate2D?
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         locationManager.delegate = self;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -41,8 +41,8 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         WKInterfaceController.openParentApplication(["request": "refreshData"],
             reply: { (replyInfo, error) -> Void in
                 // TODO: process reply data
-                let countData = replyInfo["countData"] as? NSData
-                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!) as! String
+                let countData = replyInfo["countData"] as? Data
+                let counts = NSKeyedUnarchiver.unarchiveObject(with: countData!) as! String
                 self.btnCount.setTitle(counts)
         })
     }
@@ -55,11 +55,11 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
             location = CLLocation(latitude: 0.0, longitude: 0.0)
         }
         
-        WKInterfaceController.openParentApplication(["plus": NSKeyedArchiver.archivedDataWithRootObject(location!)],
+        WKInterfaceController.openParentApplication(["plus": NSKeyedArchiver.archivedData(withRootObject: location!)],
             reply: { (replyInfo, error) -> Void in
                 // TODO: process reply data
-                let countData = replyInfo["countData"] as? NSData
-                let counts = NSKeyedUnarchiver.unarchiveObjectWithData(countData!) as! String
+                let countData = replyInfo["countData"] as? Data
+                let counts = NSKeyedUnarchiver.unarchiveObject(with: countData!) as! String
                 self.btnCount.setTitle(counts)
         })
     }
@@ -69,7 +69,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         plusOne()
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         coord = manager.location!.coordinate
     }
 }
