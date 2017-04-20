@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E09568F1EA837DD0009A419 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E09568E1EA837DD0009A419 /* CloudKit.framework */; };
 		9E1616FE1B793BC600695B3A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1616FD1B793BC600695B3A /* InterfaceController.swift */; };
 		9E1617001B793BC600695B3A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1616FF1B793BC600695B3A /* NotificationController.swift */; };
 		9E1617021B793BC600695B3A /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1617011B793BC600695B3A /* GlanceController.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		9E01804A1B6B389000952742 /* AACounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AACounter.entitlements; sourceTree = "<group>"; };
+		9E09568E1EA837DD0009A419 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		9E158F5C1B79BC4000BEE159 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		9E158F5D1B79BC4000BEE159 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
 		9E158F5E1B79BC4700BEE159 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E09568F1EA837DD0009A419 /* CloudKit.framework in Frameworks */,
 				9E86662B1B7A9ECE008C9199 /* MapKit.framework in Frameworks */,
 				9E8666291B7A99A8008C9199 /* CoreLocation.framework in Frameworks */,
 			);
@@ -134,6 +137,7 @@
 				9E1616F91B793BC600695B3A /* AACounter WatchKit Extension */,
 				9E16170B1B793BC600695B3A /* AACounter WatchKit App */,
 				9E0180181B6B1ADF00952742 /* Products */,
+				9E09568D1EA837DD0009A419 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +149,14 @@
 				9E1617071B793BC600695B3A /* AACounter WatchKit App.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9E09568D1EA837DD0009A419 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E09568E1EA837DD0009A419 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9E1616F91B793BC600695B3A /* AACounter WatchKit Extension */ = {
@@ -304,6 +316,12 @@
 						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -628,6 +646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = iOSAppIcon;
+				CODE_SIGN_ENTITLEMENTS = AACounter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -647,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = iOSAppIcon;
+				CODE_SIGN_ENTITLEMENTS = AACounter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AACounter/Info.plist;
