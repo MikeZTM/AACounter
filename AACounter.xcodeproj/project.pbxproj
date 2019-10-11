@@ -467,6 +467,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AACounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zasaz.AACounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -487,6 +488,7 @@
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 4UNYR6375C;
 				INFOPLIST_FILE = AACounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zasaz.AACounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";

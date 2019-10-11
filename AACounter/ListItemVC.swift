@@ -11,7 +11,7 @@ import CoreData
 
 class ListItemVC: UITableViewController {
     
-    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var items = [CountItem]()
     var dateFormatter = DateFormatter()
     var highlight:IndexPath?
@@ -72,7 +72,7 @@ class ListItemVC: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            managedObjectContext?.delete(items[indexPath.row])
+            managedObjectContext.delete(items[indexPath.row])
             fetchData()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -94,7 +94,7 @@ class ListItemVC: UITableViewController {
         dateFormatter.dateFormat =  NSLocalizedString("Date_Format", comment: "") //format style.
         // Execute the fetch request, and cast the results to an array of LogItem objects
         do{
-            if let fetchResults = try managedObjectContext!.fetch(fetchRequest) as? [CountItem] {
+            if let fetchResults = try managedObjectContext.fetch(fetchRequest) as? [CountItem] {
                 items = fetchResults
             }
         }catch{
