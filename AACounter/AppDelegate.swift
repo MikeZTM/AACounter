@@ -22,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 9.0, *) {
             if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
                 shortcut = true
-                handleShortCutItem(shortcutItem)
+                if handleShortCutItem(shortcutItem) {
+                    
+                }
             }
         } else {
             // Fallback on earlier versions
