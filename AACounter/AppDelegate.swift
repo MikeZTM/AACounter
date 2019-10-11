@@ -55,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return handled
     }
     
+    
 //    func application(_ application: UIApplication,
 //        handleWatchKitExtensionRequest userInfo: [AnyHashable: Any]?,
 //        reply: (@escaping ([AnyHashable: Any]?) -> Void)) {
@@ -124,7 +125,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             newItem.long = 0.0
         }
         saveContext()
-        
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

@@ -77,6 +77,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func editEnd(_ sender: AnyObject) {
        _item?.device = noteInput.text!
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.saveContext()
     }
     
     @objc func keyboardWillShow(_ notification: Notification){

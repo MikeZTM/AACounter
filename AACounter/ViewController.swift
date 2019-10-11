@@ -25,6 +25,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.plusClick(self)
             aacDelegate.shortcut=false
         }
+        #if targetEnvironment(macCatalyst)
+          let toolbar = NSToolbar(identifier: "MyToolbar")
+        #endif
         // Do any additional setup after loading the view, typically from a nib.
     }
     
