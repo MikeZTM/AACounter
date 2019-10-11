@@ -19,11 +19,11 @@ class ListItemVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 9.0, *) {
-            registerForPreviewing(with: self, sourceView: view)
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 9.0, *) {
+//            registerForPreviewing(with: self, sourceView: view)
+//        } else {
+//            // Fallback on earlier versions
+//        }
         fetchData()
         
         // Uncomment the following line to preserve selection between presentations
@@ -137,35 +137,35 @@ class ListItemVC: UITableViewController {
     
 }
 
-@available(iOS 9.0, *)
-extension ListItemVC:UIViewControllerPreviewingDelegate{
-    
-    func previewingContext(_ previewingContext: UIViewControllerPreviewing,
-        viewControllerForLocation location: CGPoint) -> UIViewController? {
-            if let indexPath = highlight {
-                
-                let asset:CountItem = items[indexPath.row]
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let peekController:DetailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-                let cellFrame = tableView.cellForRow(at: indexPath)!.frame
-                previewingContext.sourceRect = view.convert(cellFrame, from: tableView)
-                peekController.setItem(asset)
-                peekController.setItemList(self)
-                peekVC=peekController
-                return peekController
-            }else{
-                return nil
-            }
-    }
-    
-    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController)
-    {
-        if let peekController = peekVC {
-            self.show(peekController, sender: self)
-            return
-        }else{
-            dismiss(animated: true, completion: nil)
-            return
-        }
-    }
-}
+//@available(iOS 9.0, *)
+//extension ListItemVC:UIViewControllerPreviewingDelegate{
+//    
+//    func previewingContext(_ previewingContext: UIViewControllerPreviewing,
+//        viewControllerForLocation location: CGPoint) -> UIViewController? {
+//            if let indexPath = highlight {
+//                
+//                let asset:CountItem = items[indexPath.row]
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let peekController:DetailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//                let cellFrame = tableView.cellForRow(at: indexPath)!.frame
+//                previewingContext.sourceRect = view.convert(cellFrame, from: tableView)
+//                peekController.setItem(asset)
+//                peekController.setItemList(self)
+//                peekVC=peekController
+//                return peekController
+//            }else{
+//                return nil
+//            }
+//    }
+//    
+//    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController)
+//    {
+//        if let peekController = peekVC {
+//            self.show(peekController, sender: self)
+//            return
+//        }else{
+//            dismiss(animated: true, completion: nil)
+//            return
+//        }
+//    }
+//}

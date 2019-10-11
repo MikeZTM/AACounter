@@ -116,7 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let _coord = coord{
             newItem.lat = NSNumber(value: _coord.latitude)
             newItem.long = NSNumber(value: _coord.longitude)
-        }else{
+        } else {
             newItem.lat = 0.0
             newItem.long = 0.0
         }
@@ -195,7 +195,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if coordinator == nil {
             return nil
         }
-        var managedObjectContext = NSManagedObjectContext()
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
         }()
