@@ -8,14 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9E09568F1EA837DD0009A419 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E09568E1EA837DD0009A419 /* CloudKit.framework */; };
-		9E1616FE1B793BC600695B3A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1616FD1B793BC600695B3A /* InterfaceController.swift */; };
-		9E1617001B793BC600695B3A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1616FF1B793BC600695B3A /* NotificationController.swift */; };
-		9E1617021B793BC600695B3A /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1617011B793BC600695B3A /* GlanceController.swift */; };
-		9E1617041B793BC600695B3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1617031B793BC600695B3A /* Images.xcassets */; };
-		9E1617081B793BC600695B3A /* AACounter WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 9E1617071B793BC600695B3A /* AACounter WatchKit App.app */; };
-		9E1617101B793BC600695B3A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E16170E1B793BC600695B3A /* Interface.storyboard */; };
-		9E1617121B793BC600695B3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1617111B793BC600695B3A /* Images.xcassets */; };
-		9E1617151B793BC600695B3A /* AACounter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9E1616F81B793BC600695B3A /* AACounter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9E438D181B70369800EBDF28 /* NaviC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E438D171B70369800EBDF28 /* NaviC.swift */; };
 		9E8666251B7A79C1008C9199 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8666241B7A79C1008C9199 /* DetailViewController.swift */; };
 		9E8666271B7A82A4008C9199 /* CountPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8666261B7A82A4008C9199 /* CountPlace.swift */; };
@@ -32,23 +24,6 @@
 		9ECD64C91B6B3F0E00C94FC0 /* CountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD64C81B6B3F0E00C94FC0 /* CountItem.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9E1617091B793BC600695B3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9E01800F1B6B1ADF00952742 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9E1617061B793BC600695B3A;
-			remoteInfo = "AACounter WatchKit App";
-		};
-		9E1617131B793BC600695B3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9E01800F1B6B1ADF00952742 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9E1616F71B793BC600695B3A;
-			remoteInfo = "AACounter WatchKit Extension";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		9E16171C1B793BC600695B3A /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -56,7 +31,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9E1617151B793BC600695B3A /* AACounter WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,14 +45,12 @@
 		9E158F5E1B79BC4700BEE159 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		9E158F5F1B79BC4700BEE159 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		9E158F601B79BC4700BEE159 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
-		9E1616F81B793BC600695B3A /* AACounter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AACounter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1616FB1B793BC600695B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E1616FC1B793BC600695B3A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		9E1616FD1B793BC600695B3A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		9E1616FF1B793BC600695B3A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		9E1617011B793BC600695B3A /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		9E1617031B793BC600695B3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9E1617071B793BC600695B3A /* AACounter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AACounter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E16170D1B793BC600695B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E16170F1B793BC600695B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		9E1617111B793BC600695B3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -107,13 +79,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9E1616F51B793BC600695B3A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9ECD649D1B6B394F00C94FC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,8 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				9ECD64A01B6B394F00C94FC0 /* AACounter.app */,
-				9E1616F81B793BC600695B3A /* AACounter WatchKit Extension.appex */,
-				9E1617071B793BC600695B3A /* AACounter WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,39 +200,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9E1616F71B793BC600695B3A /* AACounter WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9E16171B1B793BC600695B3A /* Build configuration list for PBXNativeTarget "AACounter WatchKit Extension" */;
-			buildPhases = (
-				9E1616F41B793BC600695B3A /* Sources */,
-				9E1616F51B793BC600695B3A /* Frameworks */,
-				9E1616F61B793BC600695B3A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9E16170A1B793BC600695B3A /* PBXTargetDependency */,
-			);
-			name = "AACounter WatchKit Extension";
-			productName = "AACounter WatchKit Extension";
-			productReference = 9E1616F81B793BC600695B3A /* AACounter WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
-		};
-		9E1617061B793BC600695B3A /* AACounter WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9E16171A1B793BC600695B3A /* Build configuration list for PBXNativeTarget "AACounter WatchKit App" */;
-			buildPhases = (
-				9E1617051B793BC600695B3A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "AACounter WatchKit App";
-			productName = "AACounter WatchKit App";
-			productReference = 9E1617071B793BC600695B3A /* AACounter WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
-		};
 		9ECD649F1B6B394F00C94FC0 /* AACounter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ECD64BF1B6B394F00C94FC0 /* Build configuration list for PBXNativeTarget "AACounter" */;
@@ -282,7 +212,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9E1617141B793BC600695B3A /* PBXTargetDependency */,
 			);
 			name = AACounter;
 			productName = AACounter;
@@ -297,23 +226,13 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Mike Lee";
 				TargetAttributes = {
-					9E1616F71B793BC600695B3A = {
-						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 4UNYR6375C;
-						LastSwiftMigration = 0830;
-					};
-					9E1617061B793BC600695B3A = {
-						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 4UNYR6375C;
-						LastSwiftMigration = 0830;
-					};
 					9ECD649F1B6B394F00C94FC0 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 4UNYR6375C;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 1110;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -330,7 +249,7 @@
 			};
 			buildConfigurationList = 9E0180121B6B1ADF00952742 /* Build configuration list for PBXProject "AACounter" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -344,31 +263,11 @@
 			projectRoot = "";
 			targets = (
 				9ECD649F1B6B394F00C94FC0 /* AACounter */,
-				9E1616F71B793BC600695B3A /* AACounter WatchKit Extension */,
-				9E1617061B793BC600695B3A /* AACounter WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9E1616F61B793BC600695B3A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E1617041B793BC600695B3A /* Images.xcassets in Resources */,
-				9E1617081B793BC600695B3A /* AACounter WatchKit App.app in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9E1617051B793BC600695B3A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E1617101B793BC600695B3A /* Interface.storyboard in Resources */,
-				9E1617121B793BC600695B3A /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9ECD649E1B6B394F00C94FC0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,16 +282,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9E1616F41B793BC600695B3A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E1617001B793BC600695B3A /* NotificationController.swift in Sources */,
-				9E1616FE1B793BC600695B3A /* InterfaceController.swift in Sources */,
-				9E1617021B793BC600695B3A /* GlanceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9ECD649C1B6B394F00C94FC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,19 +298,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9E16170A1B793BC600695B3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9E1617061B793BC600695B3A /* AACounter WatchKit App */;
-			targetProxy = 9E1617091B793BC600695B3A /* PBXContainerItemProxy */;
-		};
-		9E1617141B793BC600695B3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9E1616F71B793BC600695B3A /* AACounter WatchKit Extension */;
-			targetProxy = 9E1617131B793BC600695B3A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9E16170E1B793BC600695B3A /* Interface.storyboard */ = {
@@ -479,14 +355,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -511,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -528,14 +412,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -553,92 +445,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9E1617161B793BC600695B3A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "AACounter WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.zasaz.AACounter.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		9E1617171B793BC600695B3A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "AACounter WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.zasaz.AACounter.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		9E1617181B793BC600695B3A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				IBSC_MODULE = AACounter_WatchKit_Extension;
-				INFOPLIST_FILE = "AACounter WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.zasaz.AACounter.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Debug;
-		};
-		9E1617191B793BC600695B3A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				IBSC_MODULE = AACounter_WatchKit_Extension;
-				INFOPLIST_FILE = "AACounter WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.zasaz.AACounter.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
 			name = Release;
 		};
@@ -649,6 +460,7 @@
 				CODE_SIGN_ENTITLEMENTS = AACounter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4UNYR6375C;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -658,7 +470,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.zasaz.AACounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -669,12 +483,15 @@
 				CODE_SIGN_ENTITLEMENTS = AACounter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4UNYR6375C;
 				INFOPLIST_FILE = AACounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zasaz.AACounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -686,24 +503,6 @@
 			buildConfigurations = (
 				9E0180371B6B1ADF00952742 /* Debug */,
 				9E0180381B6B1ADF00952742 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9E16171A1B793BC600695B3A /* Build configuration list for PBXNativeTarget "AACounter WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9E1617181B793BC600695B3A /* Debug */,
-				9E1617191B793BC600695B3A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9E16171B1B793BC600695B3A /* Build configuration list for PBXNativeTarget "AACounter WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9E1617161B793BC600695B3A /* Debug */,
-				9E1617171B793BC600695B3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

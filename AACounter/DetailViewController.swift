@@ -41,8 +41,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         
         
         // keyboard layout
-        NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillShow(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -56,8 +56,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     func centerMapOnLocation(_ location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-            regionRadius * 2.0, regionRadius * 2.0)
+        let coordinateRegion = MKCoordinateRegion.init(center: location.coordinate,
+            latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
@@ -79,10 +79,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
        _item?.device = noteInput.text!
     }
     
-    func keyboardWillShow(_ notification: Notification){
+    @objc func keyboardWillShow(_ notification: Notification){
         let info: NSDictionary = notification.userInfo! as NSDictionary
-        let kbFrame: NSValue = info.object(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue
-        let animationDuration: TimeInterval = (info.object(forKey: UIKeyboardAnimationDurationUserInfoKey)! as AnyObject).doubleValue
+        let kbFrame: NSValue = info.object(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue
+        let animationDuration: TimeInterval = (info.object(forKey: UIResponder.keyboardAnimationDurationUserInfoKey)! as AnyObject).doubleValue
         let keyboardFrame:CGRect = kbFrame.cgRectValue
         let height: CGFloat = keyboardFrame.size.height
         // Because the "space" is actually the difference between the bottom lines of the 2 views,
@@ -94,9 +94,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
-    func keyboardWillHide(_ notification: Notification){
+    @objc func keyboardWillHide(_ notification: Notification){
         let info: NSDictionary = notification.userInfo! as NSDictionary
-        let animationDuration: TimeInterval = (info.object(forKey: UIKeyboardAnimationDurationUserInfoKey)! as AnyObject).doubleValue
+        let animationDuration: TimeInterval = (info.object(forKey: UIResponder.keyboardAnimationDurationUserInfoKey)! as AnyObject).doubleValue
         self.keyboardSpace.constant = 50;
         UIView.animate(withDuration: animationDuration, animations: {
             self.view.layoutIfNeeded()

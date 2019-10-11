@@ -31,11 +31,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, for: UIControlState())
+        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, for: UIControl.State())
         
         NotificationCenter.default.addObserver(self,
             selector: #selector(ViewController.appCameToForeground(_:)),
-            name: NSNotification.Name.UIApplicationWillEnterForeground,
+            name: UIApplication.willEnterForegroundNotification,
             object: nil)
     }
     
@@ -54,12 +54,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }else{
             aacDelegate.plusOne(nil)
         }
-        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, for: UIControlState())
+        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, for: UIControl.State())
         
     }
     
-    func appCameToForeground(_ notification: Notification){
-        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, for: UIControlState())
+    @objc func appCameToForeground(_ notification: Notification){
+        plusBtn.setTitle((aacDelegate.countToday() as NSNumber).stringValue, for: UIControl.State())
     }
     
     func initLocationManager() {
