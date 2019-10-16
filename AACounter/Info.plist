@@ -25,9 +25,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Record loaction for notes</string>
+	<string>Record loaction for notes taking</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>Record loaction for notes taking</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
