@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MikeZTM's homebrew softwares</title>
+  <meta charset="UTF-8">
+  <script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var known = {
+      en: true,
+      zh: true
+    };
+    var lang = (navigator.language || navigator.userLanguage || 'en').substr(0, 2);
+    if(!known[lang]) lang = 'en';
+    if (lang == 'zh') {
+      document.getElementById('en').style.display = 'none';
+    } else {
+        document.getElementById('zh').style.display = 'none';
+    }
+});
+  </script>
+</head>
+<body style="font-family: 'HelveticaNeue','Roboto',PingFangSC-Regular, sans-serif;">
+  <div dir="ltr">
+    <p class="p1">AACounter</p>
+    <p class="p2"><br></p>
+    <p class="p1">Inspired by new mood therapy, this app is developed to count critical thoughts throughout the day with location information to help organize these data and solving anxiety.</p>
+    <p class="p2"><br></p>
+    <p class="p1">New features include:</p>
+    <p class="p1">iCloud sync between your devices</p>
+    <p class="p1">iOS 13 dark appearance</p>
+    <p class="p1">And much more...</p>
+  </div>
+</body>
+</html>
